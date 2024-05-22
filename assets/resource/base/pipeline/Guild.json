@@ -27,6 +27,7 @@
         ]
     },
     "guild_fightComplete": {
+        "pre_delay": 7000,
         "recognition": "OCR",
         "expected": "0",
         "roi": [
@@ -35,7 +36,6 @@
             50,
             30
         ],
-        "pre_delay": 3000,
         "next": [
             "Flag_inGuildMain",
             "sub_back2guildMain"
@@ -79,7 +79,6 @@
         ]
     },
     "back2guildfight": {
-        "pre_delay": 1000,
         "action": "Click",
         "target": [
             10,
@@ -212,7 +211,18 @@
         "template": "./closeButton1.png",
         "action": "Click",
         "next": [
-            "back"
+            "backfromguild"
+        ]
+    },
+    "backfromguild": {
+        "recognition": "OCR",
+        "expected": "公会",
+        "action": "Click",
+        "roi": [
+            200,
+            20,
+            80,
+            40
         ]
     }
 }
