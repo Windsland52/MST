@@ -1,0 +1,155 @@
+{
+    "pre_receive": {
+        "recognition": "OCR",
+        "expected": "档案",
+        "next": [
+            "fromDoctoMain",
+            "mail"
+        ]
+    },
+    "fromDoctoMain": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "档案馆",
+        "action": "Click"
+    },
+    "mail": {
+        "recognition": "TemplateMatch",
+        "template": "./mail.png",
+        "action": "Click",
+        "next": [
+            "OnKeyReceive"
+        ]
+    },
+    "OnKeyReceive": {
+        "recognition": "TemplateMatch",
+        "template": "./OneKeyRec.png",
+        "action": "Click",
+        "next": [
+            "Flag_notinWait",
+            "Flag_inWait"
+        ]
+    },
+    "Flag_notinWait": {
+        "recognition": "OCR",
+        "expected": "点击空白区域继续",
+        "inverse": true,
+        "next": [
+            "click_blank"
+        ]
+    },
+    "Flag_inWait": {
+        "recognition": "OCR",
+        "expected": "点击空白区域继续",
+        "action": "Click",
+        "next": [
+            "click_blank"
+        ]
+    },
+    "click_blank": {
+        "action": "Click",
+        "target": [
+            10,
+            10,
+            10,
+            10
+        ],
+        "next": [
+            "canteen"
+        ]
+    },
+    "canteen": {
+        "recognition": "TemplateMatch",
+        "template": "./activity.png",
+        "action": "Click",
+        "next": [
+            "noBoost",
+            "boost_rec"
+        ]
+    },
+    "noBoost": {
+        "recognition": "TemplateMatch",
+        "template": "./boost_rec.png",
+        "inverse": true,
+        "next": [
+            "market",
+            "back"
+        ]
+    },
+    "boost_rec": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "./boost_rec.png",
+        "action": "Click"
+    },
+    "market": {
+        "recognition": "OCR",
+        "expected": "商城",
+        "action": "Click",
+        "next": [
+            "shop"
+        ]
+    },
+    "shop": {
+        "recognition": "OCR",
+        "expected": "商店",
+        "action": "Click",
+        "next": [
+            "supplyPackage"
+        ]
+    },
+    "supplyPackage": {
+        "recognition": "OCR",
+        "expected": "补给礼包",
+        "action": "Click",
+        "next": [
+            "supplyPackageDaily"
+        ]
+    },
+    "supplyPackageDaily": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "action": "Click",
+        "next": [
+            "supplyPackageComplete",
+            "supplyPackageComfirm"
+        ]
+    },
+    "supplyPackageComplete": {
+        "recognition": "OCR",
+        "expected": "本日剩余：0/",
+        "next": [
+            "Flag_inMain",
+            "back"
+        ]
+    },
+    "supplyPackageComfirm": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "./free.png",
+        "action": "Click",
+        "next": [
+            "back2times"
+        ]
+    },
+    "back2times": {
+        "action": "Click",
+        "target": [
+            10,
+            10,
+            10,
+            10
+        ],
+        "next": [
+            "Flag_inMain",
+            "back"
+        ]
+    },
+    "back": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "./backButton.png",
+        "times_limit": 5,
+        "action": "Click"
+    }
+}

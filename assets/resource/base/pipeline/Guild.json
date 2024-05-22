@@ -1,0 +1,218 @@
+{
+    "guild": {
+        "recognition": "OCR",
+        "expected": "公会",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "guild_signinComplete",
+            "guild_Signin"
+        ]
+    },
+    "guild_signinComplete": {
+        "recognition": "TemplateMatch",
+        "template": "./guild_signin.png",
+        "inverse": true,
+        "next": [
+            "guild_reward"
+        ]
+    },
+    "guild_reward": {
+        "recognition": "OCR",
+        "expected": "悬赏",
+        "action": "Click",
+        "next": [
+            "guild_fightComplete",
+            "sub_guild_flashfightstart"
+        ]
+    },
+    "guild_fightComplete": {
+        "recognition": "OCR",
+        "expected": "0",
+        "roi": [
+            1200,
+            20,
+            50,
+            30
+        ],
+        "pre_delay": 3000,
+        "next": [
+            "Flag_inGuildMain",
+            "sub_back2guildMain"
+        ]
+    },
+    "sub_guild_flashfightstart": {
+        "is_sub": true,
+        "action": "Click",
+        "target": [
+            35,
+            420,
+            20,
+            20
+        ],
+        "next": [
+            "guild_flashfight"
+        ]
+    },
+    "guild_flashfight": {
+        "recognition": "OCR",
+        "expected": "快速挑战",
+        "action": "Click",
+        "next": [
+            "guild_flashfightmax"
+        ]
+    },
+    "guild_flashfightmax": {
+        "recognition": "OCR",
+        "expected": "最大",
+        "action": "Click",
+        "next": [
+            "guild_flashfightensure"
+        ]
+    },
+    "guild_flashfightensure": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "next": [
+            "back2guildfight"
+        ]
+    },
+    "back2guildfight": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            10,
+            10,
+            10,
+            10
+        ]
+    },
+    "guild_Signin": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "./guild_signin.png",
+        "action": "Click",
+        "next": [
+            "back2guildMain"
+        ]
+    },
+    "back2guildMain": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            10,
+            10,
+            10,
+            10
+        ]
+    },
+    "sub_back2guildMain": {
+        "is_sub": true,
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            70,
+            30,
+            10,
+            10
+        ]
+    },
+    "Flag_inGuildMain": {
+        "recognition": "OCR",
+        "expected": "成员",
+        "next": [
+            "Flag_inTasklist",
+            "guild2tasklist"
+        ]
+    },
+    "Flag_inTasklist": {
+        "recognition": "OCR",
+        "expected": "一键领取",
+        "next": [
+            "guild_onekeyrec"
+        ]
+    },
+    "guild2tasklist": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "任务",
+        "action": "Click",
+        "roi": [
+            1105,
+            650,
+            50,
+            40
+        ]
+    },
+    "guild_onekeyrec": {
+        "action": "Click",
+        "target": [
+            444,
+            600,
+            20,
+            20
+        ],
+        "next": [
+            "guild_onekeyrec1"
+        ]
+    },
+    "guild_onekeyrec1": {
+        "action": "Click",
+        "target": [
+            444,
+            600,
+            20,
+            20
+        ],
+        "next": [
+            "guild_onekeyrec2"
+        ]
+    },
+    "guild_onekeyrec2": {
+        "action": "Click",
+        "target": [
+            1050,
+            600,
+            20,
+            20
+        ],
+        "next": [
+            "guild_onekeyrec3"
+        ]
+    },
+    "guild_onekeyrec3": {
+        "action": "Click",
+        "target": [
+            1050,
+            600,
+            20,
+            20
+        ],
+        "next": [
+            "guild_onekeyrec4"
+        ]
+    },
+    "guild_onekeyrec4": {
+        "action": "Click",
+        "target": [
+            1050,
+            600,
+            20,
+            20
+        ],
+        "next": [
+            "Flag_inMain",
+            "Flag_inTasklist2"
+        ]
+    },
+    "Flag_inTasklist2": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "./closeButton1.png",
+        "action": "Click",
+        "next": [
+            "back"
+        ]
+    }
+}

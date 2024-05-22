@@ -1,0 +1,61 @@
+{
+    "sign_in": {
+        "next": [
+            "sign_in_complete",
+            "click_blank_place",
+            "sub_SignIn"
+        ]
+    },
+    "sub_SignIn": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "./sign_in.png",
+        "action": "Click"
+    },
+    "click_blank_place": {
+        "recognition": "OCR",
+        "expected": "点击空白区域继续",
+        "action": "Click",
+        "next": [
+            "click7daysGift"
+        ]
+    },
+    "sign_in_complete": {
+        "recognition": "TemplateMatch",
+        "template": "./sign_in.png",
+        "inverse": true,
+        "next": [
+            "Flag_inMain",
+            "Flag_inAnnouncement",
+            "click7daysGift"
+        ]
+    },
+    "click7daysGift": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "./7daysGift.png",
+        "action": "Click",
+        "next": [
+            "Flag_inMain",
+            "close_button"
+        ]
+    },
+    "close_button": {
+        "recognition": "TemplateMatch",
+        "template": "./closeButton.png",
+        "threshold": 0.4,
+        "action": "Click"
+    },
+    "Flag_inAnnouncement": {
+        "recognition": "TemplateMatch",
+        "template": "./announcement.png",
+        "next": [
+            "close_button"
+        ]
+    },
+    "Flag_inMain": {
+        "recognition": "OCR",
+        "expected": "相伴",
+        "pre_delay": 1000
+    }
+}

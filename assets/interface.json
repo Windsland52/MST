@@ -16,38 +16,34 @@
     ],
     "resource": [
         {
-            "name": "官服",
+            "name": "新月（官服）",
             "path": [
                 "{PROJECT_DIR}/resource/base"
             ]
         },
         {
-            "name": "B 服",
+            "name": "卢纳（没做，应该官服一样）",
             "path": [
-                "{PROJECT_DIR}/resource/base",
-                "{PROJECT_DIR}/resource/bilibili"
+                "{PROJECT_DIR}/resource/base"
             ]
         }
     ],
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "启动游戏",
+            "entry": "Startlhcx"
         },
         {
-            "name": "选项任务",
-            "entry": "MyTask2",
-            "option": [
-                "任务选项1"
-            ]
+            "name": "签到（仅支持启动游戏后自动弹出的签到界面）",
+            "entry": "sign_in"
         },
         {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "param": {}
+            "name": "邮件、教会补给、商店每日补给",
+            "entry": "pre_receive"
+        },
+        {
+            "name": "公会（签到、悬赏、任务）",
+            "entry": "guild"
         }
     ],
     "option": {
