@@ -71,6 +71,7 @@
         "recognition": "TemplateMatch",
         "template": "./boost_rec.png",
         "inverse": true,
+        "pre_delay": 2000,
         "next": [
             "market",
             "back"
