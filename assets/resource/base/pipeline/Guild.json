@@ -22,12 +22,18 @@
         "expected": "悬赏",
         "action": "Click",
         "next": [
+            "Flag_inGuildFight"
+        ]
+    },
+    "Flag_inGuildFight": {
+        "recognition": "OCR",
+        "expected": "公会悬赏",
+        "next": [
             "guild_fightComplete",
             "sub_guild_flashfightstart"
         ]
     },
     "guild_fightComplete": {
-        "pre_delay": 7000,
         "recognition": "OCR",
         "expected": "0",
         "roi": [
