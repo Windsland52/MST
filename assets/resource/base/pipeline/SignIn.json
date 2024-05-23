@@ -9,7 +9,7 @@
     "sub_SignIn": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "./sign_in.png",
+        "template": "./SignIn/sign_in.png",
         "action": "Click"
     },
     "click_blank_place": {
@@ -22,7 +22,7 @@
     },
     "sign_in_complete": {
         "recognition": "TemplateMatch",
-        "template": "./sign_in.png",
+        "template": "./SignIn/sign_in.png",
         "inverse": true,
         "next": [
             "Flag_inMain",
@@ -33,7 +33,7 @@
     "click7daysGift": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "./7daysGift.png",
+        "template": "./SignIn/7daysGift.png",
         "action": "Click",
         "next": [
             "Flag_inMain",
@@ -48,7 +48,7 @@
     },
     "Flag_inAnnouncement": {
         "recognition": "TemplateMatch",
-        "template": "./announcement.png",
+        "template": "./SignIn/announcement.png",
         "next": [
             "close_button"
         ]

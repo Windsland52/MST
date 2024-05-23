@@ -15,7 +15,7 @@
     },
     "mail": {
         "recognition": "TemplateMatch",
-        "template": "./mail.png",
+        "template": "./PreReceive/mail.png",
         "action": "Click",
         "roi": [
             1131,
@@ -29,7 +29,7 @@
     },
     "OnKeyReceive": {
         "recognition": "TemplateMatch",
-        "template": "./OneKeyRec.png",
+        "template": "./PreReceive/OneKeyRec.png",
         "action": "Click",
         "next": [
             "Flag_notinWait",
@@ -66,7 +66,7 @@
     },
     "canteen": {
         "recognition": "TemplateMatch",
-        "template": "./activity.png",
+        "template": "./PreReceive/activity.png",
         "roi": [
             1045,
             67,
@@ -82,7 +82,7 @@
     },
     "noBoost": {
         "recognition": "TemplateMatch",
-        "template": "./boost_rec.png",
+        "template": "./PreReceive/boost_rec.png",
         "inverse": true,
         "pre_delay": 2000,
         "next": [
@@ -93,7 +93,7 @@
     "boost_rec": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "./boost_rec.png",
+        "template": "./PreReceive/boost_rec.png",
         "action": "Click"
     },
     "market": {
@@ -140,7 +140,7 @@
     "supplyPackageComfirm": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "./free.png",
+        "template": "./PreReceive/free.png",
         "action": "Click",
         "next": [
             "back2times"

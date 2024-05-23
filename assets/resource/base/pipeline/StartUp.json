@@ -25,7 +25,7 @@
     },
     "close_ads": {
         "recognition": "TemplateMatch",
-        "template": "./ok.png",
+        "template": "./StartUp/ok.png",
         "action": "Click",
         "next": [
             "click_any_place"
