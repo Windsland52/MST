@@ -42,6 +42,10 @@
             "entry": "pre_receive"
         },
         {
+            "name": "家园",
+            "entry": "home"
+        },
+        {
             "name": "公会（签到/悬赏/任务）",
             "entry": "guild"
         }
