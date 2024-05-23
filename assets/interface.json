@@ -22,7 +22,7 @@
             ]
         },
         {
-            "name": "卢纳（没做，应该官服一样）",
+            "name": "卢纳（没做，应该和官服一样）",
             "path": [
                 "{PROJECT_DIR}/resource/base"
             ]
@@ -68,6 +68,22 @@
         {
             "name": "公会(签到/悬赏/任务)",
             "entry": "guild"
+        },
+        {
+            "name": "月之祈愿",
+            "entry": "girl_wish"
+        },
+        {
+            "name": "群星殿堂",
+            "entry": "star_wish"
+        },
+        {
+            "name": "祈愿",
+            "entry": "wish"
+        },
+        {
+            "name": "任务奖励/通行证",
+            "entry": "taskRec"
         }
     ],
     "option": {

@@ -1,0 +1,171 @@
+{
+    "taskRec": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "roi": [
+            878,
+            663,
+            54,
+            28
+        ],
+        "action": "Click",
+        "next": [
+            "Flag_dailyTaskComplete",
+            "taskOneKeyRec"
+        ]
+    },
+    "Flag_dailyTaskComplete": {
+        "recognition": "ColorMatch",
+        "roi": [
+            302,
+            576,
+            27,
+            29
+        ],
+        "method": 4,
+        "lower": [
+            255,
+            215,
+            34
+        ],
+        "upper": [
+            [
+                255,
+                216,
+                34
+            ]
+        ],
+        "inverse": true,
+        "next": [
+            "WeeklyTask"
+        ]
+    },
+    "WeeklyTask": {
+        "recognition": "OCR",
+        "expected": "周常",
+        "action": "Click",
+        "next": [
+            "Flag_weeklyTaskComplete",
+            "taskOneKeyRec"
+        ]
+    },
+    "Flag_weeklyTaskComplete": {
+        "recognition": "ColorMatch",
+        "roi": [
+            302,
+            576,
+            27,
+            29
+        ],
+        "method": 4,
+        "lower": [
+            255,
+            217,
+            37
+        ],
+        "upper": [
+            255,
+            218,
+            38
+        ],
+        "inverse": true,
+        "next": [
+            "Flag_inMainForTask",
+            "back"
+        ]
+    },
+    "Flag_inMainForTask": {
+        "recognition": "OCR",
+        "expected": "商城",
+        "roi": [
+            1194,
+            663,
+            55,
+            31
+        ],
+        "next": [
+            "passport"
+        ]
+    },
+    "taskOneKeyRec": {
+        "is_sub": true,
+        "recognition": "ColorMatch",
+        "roi": [
+            302,
+            576,
+            27,
+            29
+        ],
+        "method": 4,
+        "lower": [
+            [
+                255,
+                217,
+                37
+            ],
+            [
+                255,
+                216,
+                35
+            ],
+            [
+                255,
+                215,
+                34
+            ]
+        ],
+        "upper": [
+            [
+                255,
+                218,
+                38
+            ],
+            [
+                255,
+                216,
+                36
+            ],
+            [
+                255,
+                217,
+                34
+            ]
+        ],
+        "action": "Click"
+    },
+    "passport": {
+        "recognition": "OCR",
+        "expected": "通行证",
+        "roi": [
+            973,
+            104,
+            51,
+            29
+        ],
+        "target_offset": [
+            0,
+            -30,
+            0,
+            0
+        ],
+        "action": "Click",
+        "next": [
+            "passportOneKey"
+        ]
+    },
+    "passportOneKey": {
+        "recognition": "OCR",
+        "expected": "键领取",
+        "action": "Click",
+        "roi": [
+            887,
+            644,
+            89,
+            33
+        ],
+        "next": [
+            "Flag_inMain",
+            "back"
+        ]
+    }
+}
