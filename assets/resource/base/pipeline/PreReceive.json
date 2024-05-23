@@ -3,8 +3,8 @@
         "recognition": "OCR",
         "expected": "档案",
         "next": [
-            "fromDoctoMain",
-            "mail"
+            "mail",
+            "fromDoctoMain"
         ]
     },
     "fromDoctoMain": {
@@ -17,6 +17,12 @@
         "recognition": "TemplateMatch",
         "template": "./mail.png",
         "action": "Click",
+        "roi": [
+            1131,
+            71,
+            51,
+            59
+        ],
         "next": [
             "OnKeyReceive"
         ]
@@ -61,6 +67,13 @@
     "canteen": {
         "recognition": "TemplateMatch",
         "template": "./activity.png",
+        "roi": [
+            1045,
+            67,
+            65,
+            64
+        ],
+        "threshold": 0.6,
         "action": "Click",
         "next": [
             "noBoost",
