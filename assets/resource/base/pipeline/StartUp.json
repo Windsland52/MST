@@ -32,9 +32,9 @@
         ]
     },
     "click_any_place": {
+        "pre_wait_freezes": 1000,
         "recognition": "OCR",
         "expected": "点击任意区域继续",
-        "pre_delay": 5000,
         "action": "Click"
     },
     "loading_ocr": {

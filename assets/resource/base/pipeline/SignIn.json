@@ -1,6 +1,7 @@
 {
     "sign_in": {
         "next": [
+            "loading",
             "sign_in_complete",
             "click_blank_place",
             "sub_SignIn"

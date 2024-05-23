@@ -78,10 +78,6 @@
             "entry": "star_wish"
         },
         {
-            "name": "祈愿",
-            "entry": "wish"
-        },
-        {
             "name": "任务奖励/通行证",
             "entry": "taskRec"
         }
