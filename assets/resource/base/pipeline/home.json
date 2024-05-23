@@ -16,7 +16,7 @@
     "findBox": {
         "recognition": "TemplateMatch",
         "template": [
-            "./box.png"
+            "./Home/box.png"
         ],
         "action": "Click",
         "next": [
@@ -32,7 +32,7 @@
     },
     "enterNextRoom": {
         "recognition": "TemplateMatch",
-        "template": "./visitNext.png",
+        "template": "./Home/visitNext.png",
         "roi": [
             38,
             678,
@@ -150,16 +150,16 @@
         "expected": "事务",
         "action": "Click",
         "next": [
-            "jobOneKey",
-            "jobRefresh"
+            "jobRefresh",
+            "jobOneKey"
         ]
     },
     "jobRefresh": {
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": [
-            "./oneStarJob.png",
-            "./twoStarJob.png"
+            "./Home/oneStarJob.png",
+            "./Home/twoStarJob.png"
         ],
         "action": "Click",
         "target": true,
@@ -174,7 +174,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": [
-            "./fiveStarJob.png"
+            "./Home/fiveStarJob.png"
         ],
         "action": "Click",
         "next": []
@@ -220,7 +220,7 @@
     },
     "noVisit": {
         "recognition": "TemplateMatch",
-        "template": "./visit.png",
+        "template": "./Home/visit.png",
         "inverse": true,
         "next": [
             "closeButton2"
@@ -228,7 +228,7 @@
     },
     "closeButton2": {
         "recognition": "TemplateMatch",
-        "template": "./closeButton2.png",
+        "template": "./Home/closeButton.png",
         "action": "Click",
         "next": [
             "Flag_inMain",
@@ -237,9 +237,10 @@
     },
     "visitIn": {
         "recognition": "TemplateMatch",
-        "template": "./visit.png",
+        "template": "./Home/visit.png",
         "action": "Click",
         "next": [
+            "loading",
             "visitComplete",
             "FindinOneRoom"
         ]
@@ -247,6 +248,7 @@
     "FindinOneRoom": {
         "is_sub": true,
         "next": [
+            "loading",
             "findBox",
             "enterNextRoom"
         ]
@@ -261,6 +263,7 @@
             24
         ],
         "next": [
+            "loading",
             "Flag_inMain",
             "backVisitToMain"
         ]

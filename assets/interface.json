@@ -34,7 +34,7 @@
             "entry": "Startlhcx"
         },
         {
-            "name": "签到(配合启动)",
+            "name": "签到(需配合启动)",
             "entry": "sign_in"
         },
         {
@@ -46,7 +46,15 @@
             "entry": "home"
         },
         {
-            "name": "公会（签到/悬赏/任务）",
+            "name": "金币本",
+            "entry": "fight"
+        },
+        {
+            "name": "异象(上榜)",
+            "entry": "weeklyFight"
+        },
+        {
+            "name": "公会(签到/悬赏/任务)",
             "entry": "guild"
         }
     ],

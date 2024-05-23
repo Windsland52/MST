@@ -1,0 +1,69 @@
+{
+    "weeklyFight": {
+        "recognition": "OCR",
+        "expected": "探索",
+        "action": "Click",
+        "next": [
+            "WFMainToPractice"
+        ]
+    },
+    "WFMainToPractice": {
+        "recognition": "OCR",
+        "expected": "试炼",
+        "action": "Click",
+        "next": [
+            "practicetoMonster"
+        ]
+    },
+    "practicetoMonster": {
+        "recognition": "OCR",
+        "expected": "异象之怪",
+        "action": "Click",
+        "next": [
+            "monsterFight"
+        ]
+    },
+    "monsterFight": {
+        "recognition": "OCR",
+        "expected": "挑战",
+        "roi": [
+            1093,
+            646,
+            95,
+            47
+        ],
+        "action": "Click",
+        "next": [
+            "retreat"
+        ]
+    },
+    "retreat": {
+        "recognition": "TemplateMatch",
+        "template": "./WeeklyFight/retreat.png",
+        "roi": [
+            1213,
+            13,
+            60,
+            66
+        ],
+        "action": "Click",
+        "next": [
+            "retreatComfirm"
+        ]
+    },
+    "retreatComfirm": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            708,
+            384,
+            64,
+            36
+        ],
+        "action": "Click",
+        "next": [
+            "Flag_inMain",
+            "FightToMain"
+        ]
+    }
+}

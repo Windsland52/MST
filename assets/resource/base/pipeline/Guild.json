@@ -11,7 +11,7 @@
     },
     "guild_signinComplete": {
         "recognition": "TemplateMatch",
-        "template": "./guild_signin.png",
+        "template": "./Guild/signin.png",
         "inverse": true,
         "next": [
             "guild_reward"
@@ -96,7 +96,7 @@
     "guild_Signin": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "./guild_signin.png",
+        "template": "./Guild/signin.png",
         "action": "Click",
         "next": [
             "back2guildMain"
@@ -214,7 +214,7 @@
     "Flag_inTasklist2": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "./closeButton1.png",
+        "template": "./Guild/closeButton.png",
         "action": "Click",
         "next": [
             "backfromguild"
