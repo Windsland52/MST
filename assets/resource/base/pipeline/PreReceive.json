@@ -164,6 +164,12 @@
         "recognition": "TemplateMatch",
         "template": "./backButton.png",
         "times_limit": 10,
+        "roi": [
+            69,
+            31,
+            67,
+            24
+        ],
         "action": "Click"
     }
 }

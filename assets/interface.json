@@ -34,7 +34,7 @@
             "entry": "Startlhcx"
         },
         {
-            "name": "签到(需配合启动)",
+            "name": "签到(绑定启动)",
             "entry": "sign_in"
         },
         {
@@ -56,6 +56,14 @@
         {
             "name": "巡查",
             "entry": "patrol"
+        },
+        {
+            "name": "相伴-摸头(绑定送礼)",
+            "entry": "company"
+        },
+        {
+            "name": "相伴-送礼(绑定摸头)",
+            "entry": "giveGift"
         },
         {
             "name": "公会(签到/悬赏/任务)",
