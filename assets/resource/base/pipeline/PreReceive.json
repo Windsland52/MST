@@ -163,7 +163,7 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "./backButton.png",
-        "times_limit": 5,
+        "times_limit": 10,
         "action": "Click"
     }
 }

@@ -54,6 +54,10 @@
             "entry": "weeklyFight"
         },
         {
+            "name": "巡查",
+            "entry": "patrol"
+        },
+        {
             "name": "公会(签到/悬赏/任务)",
             "entry": "guild"
         }
