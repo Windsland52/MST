@@ -35,30 +35,6 @@
         ],
         "times_limit": 5
     },
-    "company_giveGift": {
-        "enabled": false,
-        "recognition": "OCR",
-        "expected": "相伴",
-        "action": "Click",
-        "next": [
-            "loading",
-            "Flag_inCompany1"
-        ]
-    },
-    "Flag_inCompany1": {
-        "enabled": false,
-        "recognition": "OCR",
-        "expected": "档案",
-        "roi": [
-            1181,
-            673,
-            53,
-            34
-        ],
-        "next": [
-            "giveGift"
-        ]
-    },
     "giveGift": {
         "recognition": "OCR",
         "expected": "礼物",

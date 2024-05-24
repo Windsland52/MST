@@ -24,6 +24,7 @@
         ]
     },
     "monsterFight": {
+        "post_wait_freezes": 600,
         "recognition": "OCR",
         "expected": "挑战",
         "roi": [

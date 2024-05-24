@@ -15,25 +15,13 @@
         ]
     },
     "Flag_dailyTaskComplete": {
-        "recognition": "ColorMatch",
+        "recognition": "TemplateMatch",
+        "template": "./TaskRec/taskRec.png",
         "roi": [
-            302,
-            576,
-            27,
-            29
-        ],
-        "method": 4,
-        "lower": [
-            255,
-            215,
-            34
-        ],
-        "upper": [
-            [
-                255,
-                216,
-                34
-            ]
+            1040,
+            150,
+            163,
+            499
         ],
         "inverse": true,
         "next": [
@@ -43,6 +31,12 @@
     "WeeklyTask": {
         "recognition": "OCR",
         "expected": "周常",
+        "roi": [
+            482,
+            84,
+            752,
+            58
+        ],
         "action": "Click",
         "next": [
             "Flag_weeklyTaskComplete",
@@ -50,23 +44,13 @@
         ]
     },
     "Flag_weeklyTaskComplete": {
-        "recognition": "ColorMatch",
+        "recognition": "TemplateMatch",
+        "template": "./TaskRec/taskRec.png",
         "roi": [
-            302,
-            576,
-            27,
-            29
-        ],
-        "method": 4,
-        "lower": [
-            255,
-            217,
-            37
-        ],
-        "upper": [
-            255,
-            218,
-            38
+            1040,
+            150,
+            163,
+            499
         ],
         "inverse": true,
         "next": [
@@ -89,47 +73,13 @@
     },
     "taskOneKeyRec": {
         "is_sub": true,
-        "recognition": "ColorMatch",
+        "recognition": "TemplateMatch",
+        "template": "./TaskRec/taskOneKeyRec.png",
         "roi": [
-            302,
+            183,
             576,
-            27,
-            29
-        ],
-        "method": 4,
-        "lower": [
-            [
-                255,
-                217,
-                37
-            ],
-            [
-                255,
-                216,
-                35
-            ],
-            [
-                255,
-                215,
-                34
-            ]
-        ],
-        "upper": [
-            [
-                255,
-                218,
-                38
-            ],
-            [
-                255,
-                216,
-                36
-            ],
-            [
-                255,
-                217,
-                34
-            ]
+            149,
+            26
         ],
         "action": "Click"
     },
@@ -150,7 +100,24 @@
         ],
         "action": "Click",
         "next": [
+            "passportOneKeyComplete",
             "passportOneKey"
+        ]
+    },
+    "passportOneKeyComplete": {
+        "recognition": "OCR",
+        "expected": "键领取",
+        "action": "Click",
+        "roi": [
+            887,
+            644,
+            89,
+            33
+        ],
+        "inverse": true,
+        "next": [
+            "Flag_inMain",
+            "back"
         ]
     },
     "passportOneKey": {

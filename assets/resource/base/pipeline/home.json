@@ -40,7 +40,7 @@
             33
         ],
         "action": "Click",
-        "post_delay": 500
+        "post_delay": 1000
     },
     "home_receive": {
         "recognition": "OCR",
@@ -60,6 +60,20 @@
     "home_receiveComplete": {
         "recognition": "OCR",
         "expected": "领取",
+        "roi": [
+            [
+                515,
+                167,
+                95,
+                486
+            ],
+            [
+                1072,
+                156,
+                86,
+                310
+            ]
+        ],
         "inverse": true,
         "next": [
             "plant"
@@ -69,19 +83,45 @@
         "is_sub": true,
         "recognition": "OCR",
         "expected": "领取",
+        "roi": [
+            [
+                515,
+                167,
+                95,
+                486
+            ],
+            [
+                1072,
+                156,
+                86,
+                310
+            ]
+        ],
         "action": "Click",
         "next": [
-            "home_clickblank"
+            "home_clickBlank"
         ]
     },
-    "home_clickblank": {
+    "home_clickBlank": {
         "recognition": "OCR",
         "expected": "点击空白区域继续",
+        "roi": [
+            448,
+            487,
+            383,
+            50
+        ],
         "action": "Click"
     },
     "plant": {
         "recognition": "OCR",
         "expected": "种植",
+        "roi": [
+            154,
+            421,
+            71,
+            30
+        ],
         "action": "Click",
         "next": [
             "Flag_noConfirm",
@@ -91,6 +131,12 @@
     "Flag_noConfirm": {
         "recognition": "OCR",
         "expected": "种植时间",
+        "roi": [
+            643,
+            328,
+            86,
+            40
+        ],
         "next": [
             "backPlantToHome"
         ]
@@ -135,11 +181,23 @@
     "plantConfirm": {
         "recognition": "OCR",
         "expected": "种植",
+        "roi": [
+            606,
+            591,
+            66,
+            37
+        ],
         "action": "Click"
     },
     "job": {
         "recognition": "OCR",
         "expected": "总览",
+        "roi": [
+            17,
+            250,
+            69,
+            23
+        ],
         "action": "Click",
         "next": [
             "jobStart"
@@ -148,6 +206,12 @@
     "jobStart": {
         "recognition": "OCR",
         "expected": "事务",
+        "roi": [
+            150,
+            612,
+            76,
+            36
+        ],
         "action": "Click",
         "next": [
             "jobRefresh",
@@ -196,6 +260,12 @@
     "backJobToHome": {
         "recognition": "OCR",
         "expected": "事务中心",
+        "roi": [
+            210,
+            24,
+            119,
+            37
+        ],
         "action": "Click",
         "next": [
             "visit"
@@ -204,14 +274,12 @@
     "visit": {
         "recognition": "OCR",
         "expected": "拜访",
-        "action": "Click",
-        "next": [
-            "visitStart"
-        ]
-    },
-    "visitStart": {
-        "recognition": "OCR",
-        "expected": "拜访",
+        "roi": [
+            2,
+            116,
+            99,
+            363
+        ],
         "action": "Click",
         "next": [
             "noVisit",
@@ -219,8 +287,14 @@
         ]
     },
     "noVisit": {
-        "recognition": "TemplateMatch",
-        "template": "./Home/visit.png",
+        "recognition": "OCR",
+        "expected": "拜访",
+        "roi": [
+            977,
+            166,
+            140,
+            452
+        ],
         "inverse": true,
         "next": [
             "closeButton2"
@@ -236,8 +310,14 @@
         ]
     },
     "visitIn": {
-        "recognition": "TemplateMatch",
-        "template": "./Home/visit.png",
+        "recognition": "OCR",
+        "expected": "拜访",
+        "roi": [
+            977,
+            166,
+            140,
+            452
+        ],
         "action": "Click",
         "next": [
             "loading",

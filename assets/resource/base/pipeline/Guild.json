@@ -5,14 +5,20 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
+            "loading",
             "guild_signinComplete",
             "guild_Signin"
         ]
     },
     "guild_signinComplete": {
         "recognition": "TemplateMatch",
-        "template": "./Guild/signin.png",
-        "inverse": true,
+        "template": "./Guild/signinComplete.png",
+        "roi": [
+            556,
+            408,
+            87,
+            60
+        ],
         "next": [
             "guild_reward"
         ]
@@ -20,6 +26,12 @@
     "guild_reward": {
         "recognition": "OCR",
         "expected": "悬赏",
+        "roi": [
+            887,
+            160,
+            64,
+            35
+        ],
         "action": "Click",
         "next": [
             "Flag_inGuildFight"
@@ -28,6 +40,12 @@
     "Flag_inGuildFight": {
         "recognition": "OCR",
         "expected": "公会悬赏",
+        "roi": [
+            208,
+            20,
+            122,
+            45
+        ],
         "next": [
             "guild_fightComplete",
             "sub_guild_flashfightstart"
@@ -42,6 +60,23 @@
             50,
             30
         ],
+        "next": [
+            "guild_getReward"
+        ]
+    },
+    "guild_getReward": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "./Guild/getReward.png",
+            "./Guild/getRewardComplete.png"
+        ],
+        "roi": [
+            924,
+            146,
+            50,
+            40
+        ],
+        "action": "Click",
         "next": [
             "Flag_inGuildMain",
             "sub_back2guildMain"
@@ -63,6 +98,12 @@
     "guild_flashfight": {
         "recognition": "OCR",
         "expected": "快速挑战",
+        "roi": [
+            896,
+            663,
+            116,
+            31
+        ],
         "action": "Click",
         "next": [
             "guild_flashfightmax"
@@ -71,6 +112,12 @@
     "guild_flashfightmax": {
         "recognition": "OCR",
         "expected": "最大",
+        "roi": [
+            832,
+            330,
+            65,
+            35
+        ],
         "action": "Click",
         "next": [
             "guild_flashfightensure"
@@ -79,6 +126,12 @@
     "guild_flashfightensure": {
         "recognition": "OCR",
         "expected": "确定",
+        "roi": [
+            609,
+            460,
+            61,
+            31
+        ],
         "action": "Click",
         "next": [
             "back2guildfight"
@@ -97,6 +150,12 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "./Guild/signin.png",
+        "roi": [
+            556,
+            408,
+            87,
+            60
+        ],
         "action": "Click",
         "next": [
             "back2guildMain"
@@ -126,6 +185,12 @@
     "Flag_inGuildMain": {
         "recognition": "OCR",
         "expected": "成员",
+        "roi": [
+            580,
+            469,
+            46,
+            27
+        ],
         "next": [
             "Flag_inTasklist",
             "guild2tasklist"
@@ -133,7 +198,13 @@
     },
     "Flag_inTasklist": {
         "recognition": "OCR",
-        "expected": "一键领取",
+        "expected": "键领取",
+        "roi": [
+            436,
+            590,
+            93,
+            29
+        ],
         "next": [
             "guild_onekeyrec"
         ]
@@ -207,6 +278,7 @@
             20
         ],
         "next": [
+            "loading",
             "Flag_inMain",
             "Flag_inTasklist2"
         ]
@@ -215,6 +287,12 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "./Guild/closeButton.png",
+        "roi": [
+            1198,
+            70,
+            33,
+            34
+        ],
         "action": "Click",
         "next": [
             "backfromguild"
