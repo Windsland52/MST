@@ -1,0 +1,209 @@
+{
+    "patrol": {
+        "recognition": "OCR",
+        "expected": "小镇",
+        "roi": [
+            12,
+            229,
+            62,
+            89
+        ],
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next": [
+            "Flag_noPatrolTicket",
+            "Flag_inTownLeft",
+            "Flag_inTownMid"
+        ]
+    },
+    "Flag_noPatrolTicket": {
+        "recognition": "OCR",
+        "expected": "0/",
+        "roi": [
+            1202,
+            14,
+            57,
+            31
+        ],
+        "next": [
+            "Flag_inMain",
+            "backTownToMain"
+        ]
+    },
+    "Flag_inTownLeft": {
+        "recognition": "OCR",
+        "expected": "西部废墟",
+        "next": [
+            "PatrolNotExistLeft",
+            "PatrolEnter"
+        ]
+    },
+    "Flag_inTownRight": {
+        "recognition": "OCR",
+        "expected": "鲁西昆斯克",
+        "next": [
+            "PatrolNotExistRight",
+            "PatrolEnter"
+        ]
+    },
+    "Flag_inTownMid": {
+        "next": [
+            "PatrolNotExistMid",
+            "PatrolEnter"
+        ]
+    },
+    "patrolLeft": {
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [
+            143,
+            550,
+            37,
+            58
+        ],
+        "end": [
+            962,
+            545,
+            57,
+            57
+        ]
+    },
+    "patrolRight": {
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [
+            962,
+            545,
+            57,
+            57
+        ],
+        "end": [
+            143,
+            550,
+            37,
+            58
+        ]
+    },
+    "PatrolNotExistLeft": {
+        "recognition": "TemplateMatch",
+        "template": "./Patrol/patrolExist.png",
+        "inverse": true,
+        "next": [
+            "Flag_inTownRight",
+            "patrolRight"
+        ]
+    },
+    "PatrolNotExistMid": {
+        "recognition": "TemplateMatch",
+        "template": "./Patrol/patrolExist.png",
+        "inverse": true,
+        "next": [
+            "Flag_inTownLeft",
+            "patrolLeft"
+        ]
+    },
+    "PatrolNotExistRight": {
+        "recognition": "TemplateMatch",
+        "template": "./Patrol/patrolExist.png",
+        "inverse": true,
+        "next": [
+            "Flag_inMain",
+            "backTownToMain"
+        ]
+    },
+    "backTownToMain": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "主城",
+        "roi": [
+            18,
+            334,
+            51,
+            66
+        ],
+        "action": "Click"
+    },
+    "PatrolEnter": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "./Patrol/patrolExist.png",
+        "target_offset": [
+            0,
+            65,
+            0,
+            0
+        ],
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next": [
+            "patrolTaskNotFound",
+            "patrolTaskStart"
+        ]
+    },
+    "patrolTaskNotFound": {
+        "recognition": "TemplateMatch",
+        "template": "./Patrol/patrolTask.png",
+        "inverse": true,
+        "next": [
+            "Flag_inTown",
+            "backForPatrol"
+        ]
+    },
+    "patrolTaskStart": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "./Patrol/patrolTask.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next": [
+            "patrolTaskOut",
+            "patrolTaskIn"
+        ]
+    },
+    "patrolTaskOut": {
+        "recognition": "OCR",
+        "expected": "跳过",
+        "roi": [
+            1136,
+            3,
+            93,
+            33
+        ],
+        "inverse": true
+    },
+    "patrolTaskIn": {
+        "recognition": "OCR",
+        "expected": "跳过",
+        "roi": [
+            1136,
+            3,
+            93,
+            33
+        ],
+        "action": "Click",
+        "next": [
+            "Flag_inTown",
+            "backForPatrol"
+        ]
+    },
+    "backForPatrol": {
+        "is_sub": true,
+        "action": "Click",
+        "target": [
+            67,
+            31,
+            67,
+            24
+        ]
+    },
+    "Flag_inTown": {
+        "recognition": "OCR",
+        "expected": "主城",
+        "roi": [
+            18,
+            334,
+            51,
+            66
+        ]
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "company": {
+        "recognition": "OCR",
+        "expected": "相伴",
+        "action": "Click",
+        "next": [
+            "loading",
+            "Flag_inCompany"
+        ]
+    },
+    "Flag_inCompany": {
+        "recognition": "OCR",
+        "expected": "档案",
+        "roi": [
+            1181,
+            673,
+            53,
+            34
+        ],
+        "next": [
+            "touchHead"
+        ]
+    },
+    "touchHead": {
+        "pre_wait_freezes": 500,
+        "action": "Click",
+        "target": [
+            614,
+            159,
+            52,
+            52
+        ],
+        "next": [
+            "touchHead"
+        ],
+        "times_limit": 5
+    },
+    "giveGift": {
+        "recognition": "OCR",
+        "expected": "礼物",
+        "action": "Click",
+        "roi": [
+            905,
+            674,
+            48,
+            32
+        ],
+        "next": [
+            "sendGift"
+        ]
+    },
+    "sendGift": {
+        "recognition": "OCR",
+        "expected": "赠送",
+        "action": "Click",
+        "roi": [
+            960,
+            618,
+            69,
+            41
+        ],
+        "next": [
+            "loading",
+            "Flag_inMainForCompany",
+            "Flag_GiftMax",
+            "back"
+        ]
+    },
+    "Flag_GiftMax": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "赠送礼物",
+        "action": "Click"
+    },
+    "Flag_inMainForCompany": {
+        "recognition": "OCR",
+        "expected": "商城",
+        "roi": [
+            1192,
+            662,
+            56,
+            34
+        ]
+    }
+}

@@ -1,0 +1,138 @@
+{
+    "taskRec": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "roi": [
+            878,
+            663,
+            54,
+            28
+        ],
+        "action": "Click",
+        "next": [
+            "Flag_dailyTaskComplete",
+            "taskOneKeyRec"
+        ]
+    },
+    "Flag_dailyTaskComplete": {
+        "recognition": "TemplateMatch",
+        "template": "./TaskRec/taskRec.png",
+        "roi": [
+            1040,
+            150,
+            163,
+            499
+        ],
+        "inverse": true,
+        "next": [
+            "WeeklyTask"
+        ]
+    },
+    "WeeklyTask": {
+        "recognition": "OCR",
+        "expected": "周常",
+        "roi": [
+            482,
+            84,
+            752,
+            58
+        ],
+        "action": "Click",
+        "next": [
+            "Flag_weeklyTaskComplete",
+            "taskOneKeyRec"
+        ]
+    },
+    "Flag_weeklyTaskComplete": {
+        "recognition": "TemplateMatch",
+        "template": "./TaskRec/taskRec.png",
+        "roi": [
+            1040,
+            150,
+            163,
+            499
+        ],
+        "inverse": true,
+        "next": [
+            "Flag_inMainForTask",
+            "back"
+        ]
+    },
+    "Flag_inMainForTask": {
+        "recognition": "OCR",
+        "expected": "商城",
+        "roi": [
+            1194,
+            663,
+            55,
+            31
+        ],
+        "next": [
+            "passport"
+        ]
+    },
+    "taskOneKeyRec": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "./TaskRec/taskOneKeyRec.png",
+        "roi": [
+            183,
+            576,
+            149,
+            26
+        ],
+        "action": "Click"
+    },
+    "passport": {
+        "recognition": "OCR",
+        "expected": "通行证",
+        "roi": [
+            973,
+            104,
+            51,
+            29
+        ],
+        "target_offset": [
+            0,
+            -30,
+            0,
+            0
+        ],
+        "action": "Click",
+        "next": [
+            "passportOneKeyComplete",
+            "passportOneKey"
+        ]
+    },
+    "passportOneKeyComplete": {
+        "recognition": "OCR",
+        "expected": "键领取",
+        "action": "Click",
+        "roi": [
+            887,
+            644,
+            89,
+            33
+        ],
+        "inverse": true,
+        "next": [
+            "Flag_inMain",
+            "back"
+        ]
+    },
+    "passportOneKey": {
+        "recognition": "OCR",
+        "expected": "键领取",
+        "action": "Click",
+        "roi": [
+            887,
+            644,
+            89,
+            33
+        ],
+        "next": [
+            "Flag_inMain",
+            "back"
+        ]
+    }
+}

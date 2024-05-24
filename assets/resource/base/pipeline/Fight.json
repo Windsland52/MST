@@ -25,6 +25,7 @@
         ]
     },
     "boostLack": {
+        "enabled": false,
         "recognition": "OCR",
         "expected": [
             "0/",
@@ -107,6 +108,12 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "./backButton.png",
+        "roi": [
+            69,
+            31,
+            67,
+            24
+        ],
         "action": "Click"
     }
 }

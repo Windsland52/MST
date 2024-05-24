@@ -2,34 +2,39 @@
     "pre_receive": {
         "recognition": "OCR",
         "expected": "档案",
+        "roi": [
+            984,
+            662,
+            54,
+            32
+        ],
         "next": [
-            "mail",
-            "fromDoctoMain"
+            "mail"
         ]
-    },
-    "fromDoctoMain": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": "档案馆",
-        "action": "Click"
     },
     "mail": {
         "recognition": "TemplateMatch",
         "template": "./PreReceive/mail.png",
         "action": "Click",
         "roi": [
-            1131,
-            71,
-            51,
-            59
+            1127,
+            68,
+            60,
+            62
         ],
         "next": [
             "OnKeyReceive"
         ]
     },
     "OnKeyReceive": {
-        "recognition": "TemplateMatch",
-        "template": "./PreReceive/OneKeyRec.png",
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            1141,
+            657,
+            101,
+            36
+        ],
         "action": "Click",
         "next": [
             "Flag_notinWait",
@@ -39,18 +44,28 @@
     "Flag_notinWait": {
         "recognition": "OCR",
         "expected": "点击空白区域继续",
+        "roi": [
+            348,
+            460,
+            387,
+            101
+        ],
         "inverse": true,
         "next": [
             "click_blank"
         ]
     },
     "Flag_inWait": {
+        "is_sub": true,
         "recognition": "OCR",
         "expected": "点击空白区域继续",
-        "action": "Click",
-        "next": [
-            "click_blank"
-        ]
+        "roi": [
+            348,
+            460,
+            387,
+            101
+        ],
+        "action": "Click"
     },
     "click_blank": {
         "action": "Click",
@@ -83,6 +98,12 @@
     "noBoost": {
         "recognition": "TemplateMatch",
         "template": "./PreReceive/boost_rec.png",
+        "roi": [
+            1094,
+            267,
+            145,
+            272
+        ],
         "inverse": true,
         "pre_delay": 2000,
         "next": [
@@ -94,11 +115,23 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "./PreReceive/boost_rec.png",
-        "action": "Click"
+        "action": "Click",
+        "roi": [
+            1094,
+            267,
+            145,
+            272
+        ]
     },
     "market": {
         "recognition": "OCR",
         "expected": "商城",
+        "roi": [
+            1190,
+            661,
+            63,
+            36
+        ],
         "action": "Click",
         "next": [
             "shop"
@@ -107,6 +140,12 @@
     "shop": {
         "recognition": "OCR",
         "expected": "商店",
+        "roi": [
+            13,
+            83,
+            902,
+            47
+        ],
         "action": "Click",
         "next": [
             "supplyPackage"
@@ -115,6 +154,12 @@
     "supplyPackage": {
         "recognition": "OCR",
         "expected": "补给礼包",
+        "roi": [
+            32,
+            145,
+            181,
+            558
+        ],
         "action": "Click",
         "next": [
             "supplyPackageDaily"
@@ -123,6 +168,12 @@
     "supplyPackageDaily": {
         "recognition": "OCR",
         "expected": "免费",
+        "roi": [
+            258,
+            602,
+            1022,
+            75
+        ],
         "action": "Click",
         "next": [
             "supplyPackageComplete",
@@ -132,6 +183,12 @@
     "supplyPackageComplete": {
         "recognition": "OCR",
         "expected": "本日剩余：0/",
+        "roi": [
+            305,
+            576,
+            130,
+            38
+        ],
         "next": [
             "Flag_inMain",
             "back"
@@ -139,31 +196,27 @@
     },
     "supplyPackageComfirm": {
         "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "./PreReceive/free.png",
-        "action": "Click",
-        "next": [
-            "back2times"
-        ]
-    },
-    "back2times": {
-        "action": "Click",
-        "target": [
-            10,
-            10,
-            10,
-            10
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": [
+            661,
+            431,
+            190,
+            111
         ],
-        "next": [
-            "Flag_inMain",
-            "back"
-        ]
+        "action": "Click"
     },
     "back": {
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "./backButton.png",
-        "times_limit": 5,
+        "times_limit": 10,
+        "roi": [
+            69,
+            31,
+            67,
+            24
+        ],
         "action": "Click"
     }
 }

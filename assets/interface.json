@@ -22,7 +22,7 @@
             ]
         },
         {
-            "name": "卢纳（没做，应该官服一样）",
+            "name": "卢纳（没做，应该和官服一样）",
             "path": [
                 "{PROJECT_DIR}/resource/base"
             ]
@@ -34,7 +34,7 @@
             "entry": "Startlhcx"
         },
         {
-            "name": "签到(需配合启动)",
+            "name": "签到(绑定启动)",
             "entry": "sign_in"
         },
         {
@@ -54,8 +54,40 @@
             "entry": "weeklyFight"
         },
         {
+            "name": "巡查",
+            "entry": "patrol"
+        },
+        {
+            "name": "相伴-摸头(绑定送礼)",
+            "entry": "company"
+        },
+        {
+            "name": "相伴-送礼(绑定摸头)",
+            "entry": "giveGift"
+        },
+        {
             "name": "公会(签到/悬赏/任务)",
             "entry": "guild"
+        },
+        {
+            "name": "月之祈愿",
+            "entry": "girl_wish"
+        },
+        {
+            "name": "群星殿堂",
+            "entry": "star_wish"
+        },
+        {
+            "name": "任务奖励/通行证",
+            "entry": "taskRec"
+        },
+        {
+            "name": "活动-木偶剧院-无限自动挂机",
+            "entry": "puppetTheater"
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "closeSoulTide"
         }
     ],
     "option": {
