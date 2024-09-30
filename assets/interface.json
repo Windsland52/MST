@@ -3,113 +3,81 @@
         {
             "name": "安卓端",
             "type": "Adb"
-        },
-        {
-            "name": "桌面端",
-            "type": "Win32",
-            "win32": {
-                "method": "Search",
-                "class_name": ".*",
-                "window_name": "Visual Studio"
-            }
         }
     ],
     "resource": [
         {
-            "name": "新月（官服）",
+            "name": "新月(官网/TapTap)",
             "path": [
-                "{PROJECT_DIR}/resource/base"
+                "{PROJECT_DIR}/assets/resource/base"
             ]
         },
         {
-            "name": "卢纳（没做，应该和官服一样）",
+            "name": "新月(bilibili)",
             "path": [
-                "{PROJECT_DIR}/resource/base"
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/bilibili"
+            ]
+        },
+        {
+            "name": "卢纳(小米)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/xiaomi"
+            ]
+        },
+        {
+            "name": "卢纳(华为)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/huawei"
+            ]
+        },
+        {
+            "name": "卢纳(oppo)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/oppo"
+            ]
+        },
+        {
+            "name": "卢纳(vivo)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/vivo"
+            ]
+        },
+        {
+            "name": "卢纳(4399)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/4399"
+            ]
+        },
+        {
+            "name": "卢纳(9游、豌豆荚)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/ali"
+            ]
+        },
+        {
+            "name": "卢纳(应用宝、联想)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/tencent"
             ]
         }
     ],
     "task": [
         {
             "name": "启动游戏",
-            "entry": "Startlhcx"
-        },
-        {
-            "name": "签到(绑定启动)",
-            "entry": "sign_in"
-        },
-        {
-            "name": "邮件/教会补给/商店每日补给",
-            "entry": "pre_receive"
-        },
-        {
-            "name": "家园",
-            "entry": "home"
-        },
-        {
-            "name": "金币本",
-            "entry": "fight"
-        },
-        {
-            "name": "异象(上榜)",
-            "entry": "weeklyFight"
-        },
-        {
-            "name": "巡查",
-            "entry": "patrol"
-        },
-        {
-            "name": "相伴-摸头(绑定送礼)",
-            "entry": "company"
-        },
-        {
-            "name": "相伴-送礼(绑定摸头)",
-            "entry": "giveGift"
-        },
-        {
-            "name": "公会(签到/悬赏/任务)",
-            "entry": "guild"
-        },
-        {
-            "name": "月之祈愿",
-            "entry": "girl_wish"
-        },
-        {
-            "name": "群星殿堂",
-            "entry": "star_wish"
-        },
-        {
-            "name": "任务奖励/通行证",
-            "entry": "taskRec"
-        },
-        {
-            "name": "活动-木偶剧院-无限自动挂机",
-            "entry": "puppetTheater"
+            "entry": "启动游戏"
         },
         {
             "name": "关闭游戏",
-            "entry": "closeSoulTide"
+            "entry": "关闭游戏"
         }
     ],
-    "option": {
-        "任务选项1": {
-            "cases": [
-                {
-                    "name": "文本1",
-                    "param": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "param": {
-                        "OcrTask": {
-                            "text": "文本2"
-                        }
-                    }
-                }
-            ]
-        }
-    }
+    "option": []
 }

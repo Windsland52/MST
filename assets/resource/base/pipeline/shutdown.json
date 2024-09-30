@@ -1,5 +1,5 @@
 {
-    "closeSoulTide": {
+    "关闭游戏": {
         "action": "StopApp",
         "package": "com.glkj.lhcx.gf"
     }

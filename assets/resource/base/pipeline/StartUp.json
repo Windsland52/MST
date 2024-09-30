@@ -1,47 +1,36 @@
 {
-    "Startlhcx": {
-        "action": "StartApp",
-        "package": "com.glkj.lhcx.gf/com.iqigame.libherosdkbridge.SplashActivity",
-        "post_delay": 10000,
+    "启动游戏": {
         "next": [
-            "loading_ocr",
-            "click_any_place",
-            "close_ads",
-            "Flag_inHotfix"
+            "启动界面点击任意区域"
+        ],
+        "interrupt": [
+            "热更新判断",
+            "启动界面等待",
+            "启动界面关闭公告",
+            "sub_启动游戏"
         ]
     },
-    "Flag_inHotfix": {
-        "is_sub": true,
+    "sub_启动游戏": {
+        "action": "StartApp",
+        "package": "com.glkj.lhcx.gf",
+        "post_wait_freezes": 1000,
+        "post_delay": 500
+    },
+    "热更新判断": {
         "recognition": "OCR",
         "expected": "需要从服务器下载最新的资源",
         "next": [
-            "hotfix"
+            "热更新确认"
         ]
     },
-    "hotfix": {
+    "热更新确认": {
         "recognition": "OCR",
         "expected": "确定",
         "action": "Click"
     },
-    "close_ads": {
-        "is_sub": true,
+    "启动界面关闭公告": {
         "recognition": "OCR",
         "expected": "确定",
-        "roi": [
-            609,
-            569,
-            60,
-            30
-        ],
-        "action": "Click",
-        "next": [
-            "click_any_place"
-        ]
-    },
-    "click_any_place": {
-        "pre_wait_freezes": 1000,
-        "recognition": "OCR",
-        "expected": "点击任意区域继续",
         "roi": [
             540,
             555,
@@ -50,8 +39,28 @@
         ],
         "action": "Click"
     },
-    "loading_ocr": {
-        "is_sub": true,
+    "启动界面点击任意区域": {
+        "pre_wait_freezes": 500,
+        "pre_delay": 500,
+        "recognition": "OCR",
+        "expected": "点击任意区域继续",
+        "roi": [
+            540,
+            555,
+            201,
+            43
+        ],
+        "action": "Click",
+        "target": true,
+        "next": [
+            "位于主界面"
+        ],
+        "interrupt": [
+            "加载中",
+            "退出签到"
+        ]
+    },
+    "启动界面等待": {
         "recognition": "OCR",
         "roi": [
             855,
@@ -80,7 +89,7 @@
             "月野未夜",
             "朔耶真子",
             "柯露雪儿",
-            "梦咲音月",
+            "音月",
             "欧若拉",
             "爱瑞妮",
             "爱莉莎",
@@ -99,7 +108,12 @@
             "迦瓦娜",
             "阿卡赛特",
             "青蒿",
-            "青黛"
+            "青黛",
+            "朵拉",
+            "阿拉芙",
+            "和铃",
+            "罗斯",
+            "克拉丽丝"
         ]
     }
 }
