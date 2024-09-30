@@ -1,8 +1,8 @@
 {
     "sign_in": {
+        "post_wait_freezes": 2000,
         "next": [
             "loading",
-            "Flag_inMain",
             "Flag_inAnnouncement",
             "Flag_inSignIn"
         ]
@@ -26,14 +26,13 @@
     "sub_SignIn": {
         "is_sub": true,
         "recognition": "OCR",
-        "expected": "已签到",
+        "expected": "签到",
         "roi": [
-            983,
-            601,
-            97,
-            59
+            1003,
+            612,
+            48,
+            25
         ],
-        "inverse": true,
         "action": "Click"
     },
     "click_blank_place": {
@@ -92,7 +91,6 @@
         "action": "Click"
     },
     "Flag_inAnnouncement": {
-        "is_sub": true,
         "recognition": "OCR",
         "expected": "公告",
         "roi": [
@@ -102,6 +100,7 @@
             43
         ],
         "next": [
+            "Flag_inMain",
             "close_button"
         ]
     },

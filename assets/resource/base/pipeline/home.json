@@ -40,7 +40,7 @@
             33
         ],
         "action": "Click",
-        "post_delay": 1000
+        "post_delay": 5000
     },
     "home_receive": {
         "recognition": "OCR",
@@ -106,10 +106,10 @@
         "recognition": "OCR",
         "expected": "点击空白区域继续",
         "roi": [
-            448,
-            487,
-            383,
-            50
+            548,
+            497,
+            177,
+            17
         ],
         "action": "Click"
     },
@@ -123,6 +123,14 @@
             30
         ],
         "action": "Click",
+        "next": [
+            "Flag_inPlant",
+            "plant"
+        ]
+    },
+    "Flag_inPlant": {
+        "recognition": "OCR",
+        "expected": "种子",
         "next": [
             "Flag_noConfirm",
             "plantpro"
@@ -321,12 +329,49 @@
         "action": "Click",
         "next": [
             "loading",
+            "visitEnterRoom"
+        ]
+    },
+    "visitEnterRoom": {
+        "action": "Click",
+        "target": [
+            174,
+            625,
+            62,
+            74
+        ],
+        "next": [
+            "visitEnterRoom2"
+        ]
+    },
+    "visitEnterRoom2": {
+        "action": "Click",
+        "target": [
+            174,
+            625,
+            62,
+            74
+        ],
+        "next": [
+            "visitEnterRoom3"
+        ]
+    },
+    "visitEnterRoom3": {
+        "action": "Click",
+        "target": [
+            174,
+            625,
+            62,
+            74
+        ],
+        "next": [
             "visitComplete",
             "FindinOneRoom"
         ]
     },
     "FindinOneRoom": {
         "is_sub": true,
+        "post_wait_freezes": 2000,
         "next": [
             "loading",
             "findBox",

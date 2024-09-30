@@ -1,0 +1,13 @@
+{
+    "signIn2": {
+        "recognition": "TemplateMatch",
+        "template": "SignIn/signInEntry.png",
+        "roi": [
+            1221,
+            84,
+            35,
+            26
+        ],
+        "action": "Click"
+    }
+}

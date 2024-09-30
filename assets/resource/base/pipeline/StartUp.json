@@ -48,8 +48,7 @@
             201,
             43
         ],
-        "action": "Click",
-        "post_wait_freezes": 1000
+        "action": "Click"
     },
     "loading_ocr": {
         "is_sub": true,

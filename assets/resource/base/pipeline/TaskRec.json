@@ -10,6 +10,19 @@
         ],
         "action": "Click",
         "next": [
+            "Flag_Task"
+        ]
+    },
+    "Flag_Task": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "roi": [
+            210,
+            24,
+            119,
+            37
+        ],
+        "next": [
             "Flag_dailyTaskComplete",
             "taskOneKeyRec"
         ]
@@ -99,6 +112,19 @@
             0
         ],
         "action": "Click",
+        "next": [
+            "Flag_inPassport"
+        ]
+    },
+    "Flag_inPassport": {
+        "recognition": "OCR",
+        "expected": "通行证",
+        "roi": [
+            210,
+            24,
+            119,
+            37
+        ],
         "next": [
             "passportOneKeyComplete",
             "passportOneKey"

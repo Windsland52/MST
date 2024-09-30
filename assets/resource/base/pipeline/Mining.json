@@ -1,0 +1,74 @@
+{
+    "mining": {
+        "recognition": "OCR",
+        "expected": "小镇",
+        "roi": [
+            12,
+            229,
+            62,
+            89
+        ],
+        "action": "Click",
+        "next": [
+            "miningIn",
+            "patrolLeft"
+        ]
+    },
+    "miningIn": {
+        "recognition": "OCR",
+        "expected": "西部废墟",
+        "action": "Click",
+        "next": [
+            "miningInMine"
+        ]
+    },
+    "miningInMine": {
+        "recognition": "TemplateMatch",
+        "template": "Mining/mine.png",
+        "roi": [
+            127,
+            396,
+            132,
+            231
+        ],
+        "action": "Click",
+        "next": [
+            "miningWindowRetract"
+        ]
+    },
+    "miningWindowRetract": {
+        "recognition": "TemplateMatch",
+        "template": "Mining/windowRetract.png",
+        "roi": [
+            164,
+            243,
+            53,
+            45
+        ],
+        "action": "Click",
+        "next": [
+            "clearLand",
+            "Flag_RownoLand"
+        ]
+    },
+    "clearLand": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "Mining/land1_1.png",
+            "Mining/land1_2.png"
+        ],
+        "roi": [
+            99,
+            54,
+            91,
+            624
+        ],
+        "action": "Click"
+    },
+    "Flag_RownoLand": {
+        "action": "Swipe",
+        "begin": true,
+        "end": true
+    }
+}
