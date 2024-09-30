@@ -1,0 +1,82 @@
+{
+    "controller": [
+        {
+            "name": "安卓端",
+            "type": "Adb"
+        }
+    ],
+    "resource": [
+        {
+            "name": "新月(官网/TapTap)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base"
+            ]
+        },
+        {
+            "name": "新月(bilibili)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/bilibili"
+            ]
+        },
+        {
+            "name": "卢纳(小米)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/xiaomi"
+            ]
+        },
+        {
+            "name": "卢纳(华为)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/huawei"
+            ]
+        },
+        {
+            "name": "卢纳(oppo)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/oppo"
+            ]
+        },
+        {
+            "name": "卢纳(vivo)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/vivo"
+            ]
+        },
+        {
+            "name": "卢纳(4399)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/4399"
+            ]
+        },
+        {
+            "name": "卢纳(9游、豌豆荚)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/ali"
+            ]
+        },
+        {
+            "name": "卢纳(应用宝、联想)",
+            "path": [
+                "{PROJECT_DIR}/assets/resource/base",
+                "{PROJECT_DIR}/assets/resource/tencent"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "启动游戏",
+            "entry": "启动游戏"
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "关闭游戏"
+        }
+    ]
+}
