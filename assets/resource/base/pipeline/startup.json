@@ -1,20 +1,20 @@
 {
     "启动游戏": {
         "next": [
-            "启动界面点击任意区域"
+            "位于主界面"
         ],
         "interrupt": [
             "热更新判断",
             "启动界面等待",
+            "启动界面点击任意区域",
             "启动界面关闭公告",
+            "灵魂潮汐",
             "sub_启动游戏"
         ]
     },
     "sub_启动游戏": {
         "action": "StartApp",
-        "package": "com.glkj.lhcx.gf",
-        "post_wait_freezes": 1000,
-        "post_delay": 500
+        "package": "com.glkj.lhcx.gf"
     },
     "热更新判断": {
         "recognition": "OCR",
@@ -57,16 +57,25 @@
         ],
         "interrupt": [
             "加载中",
-            "退出签到"
+            "关闭悬浮窗",
+            "灵魂潮汐"
+        ]
+    },
+    "灵魂潮汐": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "./StartUp/soulTide.png",
+            "./StartUp/heroGames.png",
+            "./StartUp/game.png"
         ]
     },
     "启动界面等待": {
         "recognition": "OCR",
         "roi": [
-            855,
-            435,
-            412,
-            98
+            610,
+            380,
+            670,
+            202
         ],
         "expected": [
             "九华",
@@ -93,14 +102,14 @@
             "欧若拉",
             "爱瑞妮",
             "爱莉莎",
-            "神纳木弁天",
+            "神纳木",
             "米涅德温",
             "艾妮斯",
             "芙丽希娅",
             "莉莉艾洛",
             "菲洛多希",
             "萨缇娅",
-            "蕖灵",
+            "清娟芙华",
             "薇姬娜",
             "西勒诺斯",
             "贞德",
