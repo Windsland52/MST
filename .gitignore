@@ -453,3 +453,7 @@ myenv/
 
 .github/
 .vscode/
+.nicegui/
+
+assets/config/
+config/
