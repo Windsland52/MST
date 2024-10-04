@@ -1,0 +1,68 @@
+{
+    "领取邮件": {
+        "next": [
+            "override_位于主界面"
+        ],
+        "interrupt": [
+            "返回主界面"
+        ]
+    },
+    "领取邮件开始": {
+        "next": [
+            "sub_领取邮件开始"
+        ]
+    },
+    "sub_领取邮件开始": {
+        "recognition": "TemplateMatch",
+        "template": "./Mail/mail.png",
+        "roi": [
+            1082,
+            34,
+            146,
+            124
+        ],
+        "action": "Click",
+        "next": [
+            "override_点击空白区域",
+            "邮件领取完毕"
+        ],
+        "interrupt": [
+            "邮件领取按键"
+        ],
+        "timeout": 15000,
+        "on_error": [
+            "返回主界面"
+        ]
+    },
+    "邮件领取按键": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            1087,
+            608,
+            193,
+            112
+        ],
+        "action": "Click"
+    },
+    "邮件领取完毕": {
+        "recognition": "OCR",
+        "expected": "附件",
+        "roi": [
+            569,
+            236,
+            141,
+            22
+        ],
+        "only_rec": true,
+        "next": [
+            "位于主界面"
+        ],
+        "interrupt": [
+            "退出邮件"
+        ],
+        "on_error": [
+            "返回主界面"
+        ]
+    }
+}
