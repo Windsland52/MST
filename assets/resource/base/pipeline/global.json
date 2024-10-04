@@ -1,7 +1,16 @@
 {
     "位于主界面": {
-        "pre_wait_freezes": 2000,
-        "pre_delay": 2000,
+        "recognition": "OCR",
+        "expected": "相伴",
+        "roi": [
+            8,
+            72,
+            1257,
+            534
+        ],
+        "action": "DoNothing"
+    },
+    "override_位于主界面": {
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
@@ -35,5 +44,202 @@
             101
         ],
         "action": "Click"
+    },
+    "override_点击空白区域": {
+        "recognition": "OCR",
+        "expected": "空白区域",
+        "target": [
+            521,
+            457,
+            245,
+            101
+        ],
+        "action": "Click"
+    },
+    "点击返回按钮": {
+        "docs": "通用左上方返回按钮",
+        "recognition": "TemplateMatch",
+        "template": "./Global/backButton.png",
+        "roi": [
+            17,
+            0,
+            166,
+            109
+        ],
+        "action": "Click"
+    },
+    "点击主城": {
+        "docs": "小镇界面，点击主城按钮返回主城（主页面）",
+        "recognition": "TemplateMatch",
+        "template": "./Global/clickMainCity.png",
+        "roi": [
+            0,
+            273,
+            121,
+            176
+        ],
+        "action": "Click"
+    },
+    "点击主页面活动": {
+        "docs": "主页面中，活动按钮，教会补给之类的入口",
+        "recognition": "TemplateMatch",
+        "template": "./Global/activityInMain.png",
+        "roi": [
+            458,
+            37,
+            822,
+            115
+        ],
+        "action": "Click"
+    },
+    "退出作战": {
+        "docs": "战斗界面，退出作战",
+        "recognition": "TemplateMatch",
+        "template": "./Global/fightExit.png",
+        "roi": [
+            1176,
+            0,
+            104,
+            103
+        ],
+        "action": "Click",
+        "next": [
+            "退出作战确认",
+            "退出作战"
+        ]
+    },
+    "退出作战确认": {
+        "docs": "战斗界面，退出作战确认",
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            659,
+            340,
+            160,
+            127
+        ],
+        "action": "Click",
+        "next": [
+            "点击屏幕确认",
+            "退出作战确认"
+        ]
+    },
+    "点击屏幕确认": {
+        "docs": "战斗完成界面，点击屏幕确认",
+        "recognition": "OCR",
+        "expected": "屏幕",
+        "roi": [
+            520,
+            620,
+            236,
+            100
+        ],
+        "action": "Click"
+    },
+    "退出主线": {
+        "docs": "主线迷宫界面，离开魔女境界",
+        "recognition": "OCR",
+        "expected": "离开",
+        "roi": [
+            0,
+            0,
+            146,
+            104
+        ],
+        "action": "Click",
+        "next": [
+            "退出主线确认",
+            "退出主线"
+        ]
+    },
+    "退出主线确认": {
+        "recognition": "OCR",
+        "expected": "退出",
+        "roi": [
+            420,
+            380,
+            155,
+            132
+        ],
+        "action": "Click"
+    },
+    "返回主界面": {
+        "next": [
+            "位于主界面"
+        ],
+        "interrupt": [
+            "关闭悬浮窗",
+            "退出作战",
+            "退出主线",
+            "点击返回按钮",
+            "加载中",
+            "点击空白区域",
+            "点击主城",
+            "其他特殊退出"
+        ]
+    },
+    "其他特殊退出": {
+        "docs": "其他特殊退出、返回主界面",
+        "next": [
+            "位于主界面"
+        ],
+        "interrupt": [
+            "退出功能列表",
+            "退出邮件",
+            "退出聊天"
+        ]
+    },
+    "退出功能列表": {
+        "recognition": "OCR",
+        "expected": "功能列表",
+        "roi": [
+            339,
+            167,
+            173,
+            125
+        ],
+        "action": "Click",
+        "target": [
+            1019,
+            406,
+            96,
+            67
+        ]
+    },
+    "退出邮件": {
+        "docs": "邮件界面，退出邮件",
+        "recognition": "OCR",
+        "expected": "邮件",
+        "roi": [
+            736,
+            0,
+            158,
+            99
+        ],
+        "action": "Click",
+        "target": [
+            543,
+            592,
+            59,
+            35
+        ]
+    },
+    "退出聊天": {
+        "docs": "聊天界面，退出聊天",
+        "recognition": "OCR",
+        "expected": "世界",
+        "roi": [
+            0,
+            0,
+            110,
+            103
+        ],
+        "action": "Click",
+        "target": [
+            543,
+            592,
+            59,
+            35
+        ]
     }
 }
