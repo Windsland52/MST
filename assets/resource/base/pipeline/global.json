@@ -1,5 +1,45 @@
 {
+    "位于主界面1": {
+        "docs": "位于主界面(spine)",
+        "recognition": "OCR",
+        "expected": "相伴",
+        "roi": [
+            562,
+            333,
+            56,
+            34
+        ],
+        "only_rec": true,
+        "action": "DoNothing"
+    },
+    "位于主界面2": {
+        "docs": "位于主界面(live2d)",
+        "recognition": "OCR",
+        "expected": "相伴",
+        "roi": [
+            740,
+            411,
+            63,
+            35
+        ],
+        "only_rec": true,
+        "action": "DoNothing"
+    },
+    "位于主界面3": {
+        "docs": "位于主界面(誓约)",
+        "recognition": "OCR",
+        "expected": "相伴",
+        "roi": [
+            324,
+            321,
+            71,
+            37
+        ],
+        "only_rec": true,
+        "action": "DoNothing"
+    },
     "位于主界面": {
+        "docs": "位于主界面(通用)",
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
@@ -22,8 +62,29 @@
         "action": "DoNothing"
     },
     "加载中": {
+        "docs": "加载中（左上）",
         "recognition": "OCR",
         "expected": "加载中",
+        "roi": [
+            120,
+            260,
+            126,
+            23
+        ],
+        "only_rec": true,
+        "action": "DoNothing"
+    },
+    "加载中1": {
+        "docs": "加载中（中下）",
+        "recognition": "OCR",
+        "expected": "加载中",
+        "roi": [
+            554,
+            513,
+            158,
+            23
+        ],
+        "only_rec": true,
         "action": "DoNothing"
     },
     "关闭悬浮窗": {
@@ -165,7 +226,9 @@
     },
     "返回主界面": {
         "next": [
-            "位于主界面"
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
         ],
         "interrupt": [
             "关闭悬浮窗",
@@ -173,6 +236,7 @@
             "退出主线",
             "点击返回按钮",
             "加载中",
+            "加载中1",
             "点击空白区域",
             "点击主城",
             "其他特殊退出"
@@ -181,7 +245,9 @@
     "其他特殊退出": {
         "docs": "其他特殊退出、返回主界面",
         "next": [
-            "位于主界面"
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
         ],
         "interrupt": [
             "退出功能列表",
@@ -240,6 +306,50 @@
             592,
             59,
             35
+        ]
+    },
+    "购买": {
+        "docs": "购买界面，点击购买",
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": [
+            601,
+            164,
+            77,
+            44
+        ],
+        "only_rec": true,
+        "target": [
+            737,
+            498,
+            60,
+            31
+        ],
+        "action": "Click",
+        "next": [
+            "点击空白区域"
+        ]
+    },
+    "override_购买": {
+        "docs": "购买界面，点击购买",
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": [
+            601,
+            164,
+            77,
+            44
+        ],
+        "only_rec": true,
+        "target": [
+            737,
+            498,
+            60,
+            31
+        ],
+        "action": "Click",
+        "next": [
+            "点击空白区域"
         ]
     }
 }
