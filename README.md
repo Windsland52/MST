@@ -7,6 +7,13 @@
 
 # MST
 
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable-next-line MD036 -->
+_✨ 基于MaaFramework的灵魂潮汐(SoulTide)日常脚本 ✨_
+<!-- prettier-ignore-end -->
+
+</div>
+
 <p align="center">
   <img alt="license" src="https://img.shields.io/github/license/Windsland52/MST">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows-blueviolet">
@@ -14,7 +21,10 @@
   <img alt="stars" src="https://img.shields.io/github/stars/Windsland52/MST?style=social">
 </p>
 
-基于MaaFramework的灵魂潮汐(SoulTide)日常脚本。图像技术 + 模拟控制，解放双手！
+## 简介
+
+基于全新架构的 灵魂潮汐 小助手。图像技术 + 模拟控制，解放双手！
+由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
 
 ## 功能一览
 
@@ -57,14 +67,14 @@
 若在开启模拟器的情况下自动检测失败，则需要手动输入，相关端口请直接到对应模拟器官网查询。
 
 
-### 自行开发
+## 参与开发
 
-若想自行开发，请参考[MaaFramework快速开始](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)，本项目暂时只通过Json低代码开发。
+若想参与开发，请参考[MaaFramework快速开始](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)，本项目暂时只通过 纯 Pipeline 开发 。
 
-### 其它问题
+## 开发日志
 
-若出现其它问题，请详细截屏并提供相关日志，在issue中留言。
+[开发日志](https://windsland52.github.io/)，开发可参考。
 
-# 开发日志
+## join us
 
-[开发日志](https://windsland52.github.io/)
+MST开发/用户交流群 QQ 群：[212220209](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=zybZ5ST3IHx8_l8pajwFd9OxpNQzXjdy&authKey=C5qMnDOvB4mVKNNC%2By45eKc%2BLnETkm4XFQmmdrmWzu9qemKW4lurHbf4h4h8%2F0bA&noverify=0&group_code=212220209)
