@@ -1,0 +1,146 @@
+{
+    "教会补给": {
+        "next": [
+            "override_位于主界面"
+        ],
+        "interrupt": [
+            "返回主界面"
+        ]
+    },
+    "领取教会补给开始": {
+        "next": [
+            "位于教会补给界面"
+        ],
+        "interrupt": [
+            "进入活动(主页面)",
+            "进入教会补给界面"
+        ]
+    },
+    "位于教会补给界面": {
+        "recognition": "OCR",
+        "expected": "教会补给",
+        "roi": [
+            292,
+            92,
+            140,
+            38
+        ],
+        "only_rec": true,
+        "next": [
+            "未到供应时间1",
+            "领取教会补给1成功"
+        ],
+        "interrupt": [
+            "领取教会补给1"
+        ]
+    },
+    "进入教会补给界面": {
+        "recognition": "OCR",
+        "expected": "教会补给",
+        "roi": [
+            0,
+            68,
+            233,
+            640
+        ],
+        "action": "Click"
+    },
+    "领取教会补给1成功": {
+        "recognition": "OCR",
+        "expected": "已领取",
+        "roi": [
+            1119,
+            281,
+            94,
+            32
+        ],
+        "only_rec": true,
+        "next": [
+            "未到供应时间2",
+            "领取教会补给2成功"
+        ],
+        "interrupt": [
+            "领取教会补给2"
+        ]
+    },
+    "领取教会补给1": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            1119,
+            281,
+            94,
+            32
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "领取教会补给2": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            1133,
+            504,
+            68,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "领取教会补给2成功": {
+        "recognition": "OCR",
+        "expected": "已领取",
+        "roi": [
+            1133,
+            504,
+            68,
+            24
+        ],
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "返回主界面"
+        ]
+    },
+    "未到供应时间1": {
+        "recognition": "OCR",
+        "expected": "供应时间",
+        "roi": [
+            1119,
+            281,
+            94,
+            32
+        ],
+        "only_rec": true,
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "返回主界面"
+        ]
+    },
+    "未到供应时间2": {
+        "recognition": "OCR",
+        "expected": "供应时间",
+        "roi": [
+            1133,
+            504,
+            68,
+            24
+        ],
+        "only_rec": true,
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "返回主界面"
+        ]
+    }
+}
