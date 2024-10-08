@@ -87,4 +87,4 @@ _✨ 基于MaaFramework的灵魂潮汐(SoulTide)日常脚本 ✨_
 
 ## Join us
 
-MST开发/用户交流群 QQ 群：[212220209](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=zybZ5ST3IHx8_l8pajwFd9OxpNQzXjdy&authKey=C5qMnDOvB4mVKNNC%2By45eKc%2BLnETkm4XFQmmdrmWzu9qemKW4lurHbf4h4h8%2F0bA&noverify=0&group_code=212220209)
+- MST开发/用户交流群 QQ 群：[212220209](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=zybZ5ST3IHx8_l8pajwFd9OxpNQzXjdy&authKey=C5qMnDOvB4mVKNNC%2By45eKc%2BLnETkm4XFQmmdrmWzu9qemKW4lurHbf4h4h8%2F0bA&noverify=0&group_code=212220209)
