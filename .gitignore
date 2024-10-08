@@ -446,3 +446,14 @@ install
 
 # Tools
 tools/ImageCropper/**/*.png
+
+# venv
+.venv/
+myenv/
+
+.github/
+.vscode/
+.nicegui/
+
+assets/config/
+config/

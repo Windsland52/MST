@@ -1,0 +1,247 @@
+{
+    "领取商店补给": {
+        "next": [
+            "override_位于主界面"
+        ],
+        "interrupt": [
+            "返回主界面"
+        ]
+    },
+    "领取商店补给开始": {
+        "post_wait_freezes": 500,
+        "recognition": "OCR",
+        "expected": "商城",
+        "roi": [
+            1209,
+            666,
+            48,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "进入商店",
+            "领取商店补给开始"
+        ],
+        "on_error": [
+            "返回主界面"
+        ]
+    },
+    "进入商店": {
+        "recognition": "OCR",
+        "expected": "商店",
+        "roi": [
+            446,
+            97,
+            58,
+            32
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "进入补给礼包界面",
+            "进入商店"
+        ],
+        "on_error": [
+            "返回主界面"
+        ]
+    },
+    "进入补给礼包界面": {
+        "recognition": "OCR",
+        "expected": "补给礼包",
+        "roi": [
+            0,
+            130,
+            220,
+            581
+        ],
+        "action": "Click",
+        "next": [
+            "补给礼包加载完毕",
+            "进入补给礼包界面"
+        ],
+        "on_error": [
+            "返回主界面"
+        ]
+    },
+    "补给礼包加载完毕": {
+        "recognition": "OCR",
+        "expected": "剩余",
+        "roi": [
+            311,
+            579,
+            112,
+            30
+        ],
+        "only_rec": true,
+        "next": [
+            "1号体力溢出检测",
+            "1号补给无",
+            "1号补给有"
+        ]
+    },
+    "1号补给无": {
+        "recognition": "OCR",
+        "expected": "本日剩余：0",
+        "roi": [
+            315,
+            580,
+            88,
+            25
+        ],
+        "only_rec": true,
+        "next": [
+            "2号体力溢出检测",
+            "2号补给无",
+            "2号补给有"
+        ]
+    },
+    "2号补给无": {
+        "recognition": "OCR",
+        "expected": "本日剩余：0",
+        "roi": [
+            554,
+            581,
+            88,
+            24
+        ],
+        "only_rec": true,
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "点击返回按钮"
+        ],
+        "on_error": [
+            "返回主界面"
+        ]
+    },
+    "1号补给有": {
+        "recognition": "OCR",
+        "expected": "本日剩余：0",
+        "roi": "1号补给无",
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "识别1号免费",
+            "识别1号不免费"
+        ]
+    },
+    "2号补给有": {
+        "recognition": "OCR",
+        "expected": "本日剩余：0",
+        "roi": "2号补给无",
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "识别2号免费",
+            "识别2号不免费"
+        ]
+    },
+    "识别1号免费": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": [
+            344,
+            623,
+            48,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "override_购买"
+        ]
+    },
+    "识别2号免费": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": [
+            576,
+            621,
+            60,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "override_购买1"
+        ]
+    },
+    "识别1号不免费": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": "识别1号不免费",
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "点击返回按钮"
+        ],
+        "on_error": [
+            "返回主界面"
+        ]
+    },
+    "识别2号不免费": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": "识别2号不免费",
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "点击返回按钮"
+        ],
+        "on_error": [
+            "返回主界面"
+        ]
+    },
+    "1号体力溢出检测": {
+        "recognition": "OCR",
+        "expected": "精神力低于",
+        "roi": [
+            283,
+            505,
+            156,
+            21
+        ],
+        "only_rec": true,
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "返回主界面_fast"
+        ]
+    },
+    "2号体力溢出检测": {
+        "recognition": "OCR",
+        "expected": "精神力低于",
+        "roi": [
+            529,
+            505,
+            156,
+            21
+        ],
+        "only_rec": true,
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "返回主界面_fast"
+        ]
+    }
+}

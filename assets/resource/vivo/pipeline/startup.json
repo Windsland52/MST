@@ -1,0 +1,6 @@
+{
+    "sub_启动游戏": {
+        "action": "StartApp",
+        "package": "com.IQIgame.lhcx.vivo"
+    }
+}

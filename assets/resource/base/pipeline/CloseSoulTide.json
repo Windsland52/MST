@@ -1,6 +1,0 @@
-{
-    "closeSoulTide": {
-        "action": "StopApp",
-        "package": "com.glkj.lhcx.gf"
-    }
-}

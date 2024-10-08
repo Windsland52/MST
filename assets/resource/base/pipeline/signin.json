@@ -1,0 +1,144 @@
+{
+    "每日签到": {
+        "next": [
+            "override_位于主界面"
+        ],
+        "interrupt": [
+            "返回主界面"
+        ]
+    },
+    "签到事件开始": {
+        "next": [
+            "进入签到页面"
+        ],
+        "interrupt": [
+            "点击签到入口"
+        ]
+    },
+    "点击签到入口": {
+        "recognition": "TemplateMatch",
+        "template": "./SignIn/signInEntry.png",
+        "roi": [
+            1167,
+            34,
+            113,
+            125
+        ],
+        "action": "Click"
+    },
+    "进入签到页面": {
+        "recognition": "OCR",
+        "expected": "签到",
+        "roi": [
+            340,
+            283,
+            144,
+            129
+        ],
+        "action": "Click",
+        "next": [
+            "处于签到页面",
+            "进入签到页面"
+        ]
+    },
+    "处于签到页面": {
+        "recognition": "OCR",
+        "expected": "签到",
+        "roi": [
+            946,
+            567,
+            168,
+            116
+        ],
+        "next": [
+            "已签到"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "未签到"
+        ]
+    },
+    "未签到": {
+        "recognition": "OCR",
+        "expected": "已签到",
+        "replace": [
+            "至",
+            "到"
+        ],
+        "roi": [
+            946,
+            567,
+            168,
+            116
+        ],
+        "inverse": true,
+        "next": [
+            "点击空白区域",
+            "点击签到"
+        ]
+    },
+    "点击签到": {
+        "recognition": "OCR",
+        "expected": "签到",
+        "replace": [
+            "至",
+            "到"
+        ],
+        "roi": [
+            946,
+            567,
+            168,
+            116
+        ],
+        "action": "Click"
+    },
+    "已签到": {
+        "recognition": "OCR",
+        "expected": "已签到",
+        "replace": [
+            "至",
+            "到"
+        ],
+        "roi": [
+            946,
+            567,
+            168,
+            116
+        ],
+        "next": [
+            "位于主界面"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "七日签到",
+            "关闭悬浮窗",
+            "退出功能列表",
+            "返回主界面"
+        ]
+    },
+    "七日签到": {
+        "recognition": "OCR",
+        "expected": "7/7",
+        "roi": [
+            416,
+            667,
+            35,
+            23
+        ],
+        "only_rec": true,
+        "next": [
+            "点击七日签到"
+        ]
+    },
+    "点击七日签到": {
+        "recognition": "TemplateMatch",
+        "template": "./SignIn/7daysGift.png",
+        "roi": [
+            328,
+            539,
+            142,
+            157
+        ],
+        "action": "Click"
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "领取通行证": {
+        "next": [
+            "override_位于主界面"
+        ],
+        "interrupt": [
+            "返回主界面"
+        ]
+    },
+    "领取通行证开始": {
+        "recognition": "TemplateMatch",
+        "template": "./Passport/passport.png",
+        "roi": [
+            410,
+            10,
+            870,
+            170
+        ],
+        "action": "Click",
+        "next": [
+            "位于通行证界面",
+            "领取通行证开始"
+        ]
+    },
+    "位于通行证界面": {
+        "recognition": "OCR",
+        "expected": "通行证",
+        "roi": [
+            209,
+            27,
+            88,
+            29
+        ],
+        "only_rec": true,
+        "next": [
+            "通行证领取完成"
+        ],
+        "interrupt": [
+            "通行证一键领取"
+        ]
+    },
+    "通行证一键领取": {
+        "recognition": "OCR",
+        "expected": "一键领取",
+        "roi": [
+            883,
+            644,
+            92,
+            30
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "点击空白区域",
+            "通行证一键领取"
+        ]
+    },
+    "通行证领取完成": {
+        "recognition": "OCR",
+        "expected": "一键领取",
+        "roi": [
+            883,
+            644,
+            92,
+            30
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "返回主界面_fast"
+        ]
+    }
+}

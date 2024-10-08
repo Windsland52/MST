@@ -1,0 +1,102 @@
+{
+    "启动游戏": {
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "热更新判断",
+            "启动界面等待",
+            "启动界面点击任意区域",
+            "启动界面关闭公告",
+            "加载中",
+            "灵魂潮汐",
+            "关闭悬浮窗",
+            "sub_启动游戏"
+        ]
+    },
+    "sub_启动游戏": {
+        "action": "StartApp",
+        "package": "com.glkj.lhcx.gf"
+    },
+    "热更新判断": {
+        "recognition": "OCR",
+        "expected": "需要从服务器下载最新的资源",
+        "roi": [
+            365,
+            239,
+            552,
+            168
+        ],
+        "next": [
+            "热更新确认"
+        ]
+    },
+    "热更新确认": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "roi": [
+            529,
+            354,
+            223,
+            153
+        ],
+        "action": "Click"
+    },
+    "启动界面关闭公告": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "roi": [
+            540,
+            555,
+            201,
+            43
+        ],
+        "action": "Click"
+    },
+    "启动界面点击任意区域": {
+        "recognition": "OCR",
+        "expected": "点击任意区域继续",
+        "roi": [
+            540,
+            555,
+            201,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3",
+            "启动界面点击任意区域"
+        ],
+        "interrupt": [
+            "关闭悬浮窗",
+            "加载中",
+            "灵魂潮汐"
+        ]
+    },
+    "灵魂潮汐": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "./StartUp/soulTide.png",
+            "./StartUp/heroGames.png",
+            "./StartUp/game.png"
+        ]
+    },
+    "启动界面等待": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1111,
+            560,
+            164,
+            160
+        ],
+        "template": [
+            "./StartUp/healer.png",
+            "./StartUp/dps.png",
+            "./StartUp/tank.png"
+        ]
+    }
+}

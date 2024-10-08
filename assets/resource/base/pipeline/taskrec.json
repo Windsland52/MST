@@ -1,0 +1,152 @@
+{
+    "领取任务奖励": {
+        "next": [
+            "override_位于主界面"
+        ],
+        "interrupt": [
+            "返回主界面"
+        ]
+    },
+    "领取任务奖励开始": {
+        "next": [
+            "处于任务奖励界面"
+        ],
+        "interrupt": [
+            "进入任务奖励(无公会)",
+            "进入任务奖励(有公会)"
+        ]
+    },
+    "进入任务奖励(无公会)": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "roi": [
+            1001,
+            667,
+            40,
+            23
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "进入任务奖励(有公会)": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "roi": [
+            894,
+            665,
+            42,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "处于任务奖励界面": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "roi": [
+            212,
+            26,
+            60,
+            31
+        ],
+        "only_rec": true,
+        "next": [
+            "日常奖励领取完毕"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "一键领取"
+        ]
+    },
+    "日常奖励领取完毕": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            1103,
+            184,
+            43,
+            24
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "位于周常奖励界面"
+        ],
+        "interrupt": [
+            "一键领取",
+            "点击空白区域",
+            "跳转周常奖励界面"
+        ]
+    },
+    "位于周常奖励界面": {
+        "recognition": "TemplateMatch",
+        "template": "./TaskRec/weekTask.png",
+        "roi": [
+            167,
+            129,
+            126,
+            127
+        ],
+        "next": [
+            "周常奖励领取完毕"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "一键领取"
+        ]
+    },
+    "跳转周常奖励界面": {
+        "recognition": "OCR",
+        "expected": "周常",
+        "roi": [
+            726,
+            96,
+            62,
+            31
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "周常奖励领取完毕": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            1103,
+            184,
+            43,
+            24
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "一键领取",
+            "点击空白区域",
+            "返回主界面_fast"
+        ]
+    },
+    "一键领取": {
+        "recognition": "ColorMatch",
+        "roi": [
+            180,
+            566,
+            161,
+            46
+        ],
+        "lower": [
+            230,
+            190,
+            9
+        ],
+        "upper": [
+            280,
+            240,
+            59
+        ],
+        "action": "Click"
+    }
+}
