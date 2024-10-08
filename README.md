@@ -75,6 +75,16 @@ _✨ 基于MaaFramework的灵魂潮汐(SoulTide)日常脚本 ✨_
 
 [开发日志](https://windsland52.github.io/)，开发可参考。
 
-## join us
+## 鸣谢
+
+本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
+
+感谢以下开发者对本项目作出的贡献:
+
+<a href="https://github.com/Windsland52/MST/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Windsland52/MST&max=1000" />
+</a>
+
+## Join us
 
 MST开发/用户交流群 QQ 群：[212220209](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=zybZ5ST3IHx8_l8pajwFd9OxpNQzXjdy&authKey=C5qMnDOvB4mVKNNC%2By45eKc%2BLnETkm4XFQmmdrmWzu9qemKW4lurHbf4h4h8%2F0bA&noverify=0&group_code=212220209)
