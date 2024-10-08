@@ -1,6 +1,6 @@
 {
     "位于主界面1": {
-        "docs": "位于主界面(spine)",
+        "global_doc": "位于主界面(spine)",
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
@@ -13,7 +13,7 @@
         "action": "DoNothing"
     },
     "位于主界面2": {
-        "docs": "位于主界面(live2d)",
+        "global_doc": "位于主界面(live2d)",
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
@@ -26,7 +26,7 @@
         "action": "DoNothing"
     },
     "位于主界面3": {
-        "docs": "位于主界面(誓约)",
+        "global_doc": "位于主界面(誓约)",
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
@@ -39,7 +39,7 @@
         "action": "DoNothing"
     },
     "位于主界面": {
-        "docs": "位于主界面(通用)",
+        "global_doc": "位于主界面(通用)",
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
@@ -62,7 +62,7 @@
         "action": "DoNothing"
     },
     "加载中": {
-        "docs": "加载中（左上）",
+        "global_doc": "加载中（左上）",
         "recognition": "OCR",
         "expected": "加载中",
         "roi": [
@@ -75,7 +75,7 @@
         "action": "DoNothing"
     },
     "加载中1": {
-        "docs": "加载中（中下）",
+        "global_doc": "加载中（中下）",
         "recognition": "OCR",
         "expected": "加载中",
         "roi": [
@@ -144,7 +144,7 @@
         "action": "Click"
     },
     "点击返回按钮": {
-        "docs": "通用左上方返回按钮",
+        "global_doc": "通用左上方返回按钮",
         "recognition": "TemplateMatch",
         "template": "./Global/backButton.png",
         "roi": [
@@ -156,7 +156,7 @@
         "action": "Click"
     },
     "点击主城": {
-        "docs": "小镇界面，点击主城按钮返回主城（主页面）",
+        "global_doc": "小镇界面，点击主城按钮返回主城（主页面）",
         "recognition": "TemplateMatch",
         "template": "./Global/clickMainCity.png",
         "roi": [
@@ -168,7 +168,7 @@
         "action": "Click"
     },
     "点击主页面活动": {
-        "docs": "主页面中，活动按钮，教会补给之类的入口",
+        "global_doc": "主页面中，活动按钮，教会补给之类的入口",
         "recognition": "TemplateMatch",
         "template": "./Global/activityInMain.png",
         "roi": [
@@ -180,7 +180,7 @@
         "action": "Click"
     },
     "退出作战": {
-        "docs": "战斗界面，退出作战",
+        "global_doc": "战斗界面，退出作战",
         "recognition": "TemplateMatch",
         "template": "./Global/fightExit.png",
         "roi": [
@@ -196,7 +196,7 @@
         ]
     },
     "退出作战确认": {
-        "docs": "战斗界面，退出作战确认",
+        "global_doc": "战斗界面，退出作战确认",
         "recognition": "OCR",
         "expected": "确认",
         "roi": [
@@ -212,7 +212,7 @@
         ]
     },
     "点击屏幕确认": {
-        "docs": "战斗完成界面，点击屏幕确认",
+        "global_doc": "战斗完成界面，点击屏幕确认",
         "recognition": "OCR",
         "expected": "屏幕",
         "roi": [
@@ -224,7 +224,7 @@
         "action": "Click"
     },
     "退出主线": {
-        "docs": "主线迷宫界面，离开魔女境界",
+        "global_doc": "主线迷宫界面，离开魔女境界",
         "recognition": "OCR",
         "expected": "离开",
         "roi": [
@@ -279,7 +279,7 @@
         ]
     },
     "其他特殊退出": {
-        "docs": "其他特殊退出、返回主界面",
+        "global_doc": "其他特殊退出、返回主界面",
         "next": [
             "点击主城",
             "退出功能列表",
@@ -307,7 +307,7 @@
         ]
     },
     "退出邮件": {
-        "docs": "邮件界面，退出邮件",
+        "global_doc": "邮件界面，退出邮件",
         "recognition": "OCR",
         "expected": "邮件",
         "roi": [
@@ -325,7 +325,7 @@
         ]
     },
     "退出聊天": {
-        "docs": "聊天界面，退出聊天",
+        "global_doc": "聊天界面，退出聊天",
         "recognition": "OCR",
         "expected": "世界",
         "roi": [
@@ -343,7 +343,7 @@
         ]
     },
     "购买": {
-        "docs": "购买界面，点击购买",
+        "global_doc": "购买界面，点击购买",
         "recognition": "OCR",
         "expected": "购买",
         "roi": [
@@ -365,7 +365,7 @@
         ]
     },
     "override_购买": {
-        "docs": "购买界面，点击购买",
+        "global_doc": "购买界面，点击购买",
         "recognition": "OCR",
         "expected": "购买",
         "roi": [
@@ -387,7 +387,7 @@
         ]
     },
     "override_购买1": {
-        "docs": "购买界面，点击购买",
+        "global_doc": "购买界面，点击购买",
         "recognition": "OCR",
         "expected": "购买",
         "roi": [
@@ -407,5 +407,17 @@
         "next": [
             "点击空白区域"
         ]
+    },
+    "进入活动(主页面)": {
+        "global_doc": "主页面中，进入上方活动",
+        "recognition": "TemplateMatch",
+        "template": "./activity/activity.png",
+        "roi": [
+            1003,
+            31,
+            143,
+            133
+        ],
+        "action": "Click"
     }
 }

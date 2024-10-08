@@ -8,11 +8,6 @@
         ]
     },
     "领取商店补给开始": {
-        "next": [
-            "sub_领取商店补给开始"
-        ]
-    },
-    "sub_领取商店补给开始": {
         "post_wait_freezes": 500,
         "recognition": "OCR",
         "expected": "商城",
@@ -26,7 +21,7 @@
         "action": "Click",
         "next": [
             "进入商店",
-            "sub_领取商店补给开始"
+            "领取商店补给开始"
         ],
         "on_error": [
             "返回主界面"
