@@ -30,12 +30,11 @@
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
-            324,
-            321,
-            71,
-            37
+            126,
+            141,
+            1036,
+            347
         ],
-        "only_rec": true,
         "action": "DoNothing"
     },
     "位于主界面": {
@@ -43,10 +42,10 @@
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
-            8,
-            72,
-            1257,
-            534
+            114,
+            271,
+            386,
+            111
         ],
         "action": "DoNothing"
     },
