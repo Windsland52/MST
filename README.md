@@ -1,7 +1,23 @@
-# MST
-基于MaaFramework的灵魂潮汐(SoulTide)日常脚本。
+<!-- markdownlint-disable MD033 MD041 -->
+<p align="center">
+  <img alt="LOGO" src="https://raw.githubusercontent.com/Windsland52/MST/refs/heads/dev/assets/resource/base/image/Logo/logo.jpg" width="256" height="256" />
+</p>
 
-## 功能
+<div align="center">
+
+# MST
+
+<p align="center">
+  <img alt="license" src="https://img.shields.io/github/license/Windsland52/MST">
+  <img alt="platform" src="https://img.shields.io/badge/platform-Windows-blueviolet">
+  <img alt="commit" src="https://img.shields.io/github/commit-activity/m/Windsland52/MST?color=%23ff69b4">
+  <img alt="stars" src="https://img.shields.io/github/stars/Windsland52/MST?style=social">
+</p>
+
+基于MaaFramework的灵魂潮汐(SoulTide)日常脚本。图像技术 + 模拟控制，解放双手！
+
+## 功能一览
+
 - [x] 启动游戏
 - [x] 每日签到
 - [x] 领取邮件
@@ -21,7 +37,7 @@
   - [ ] 摸头
   - [ ] 送礼(和摸头相互绑定)
 - [ ] 每日抽卡
-- [ ] 任务/通行证
+- [x] 任务/通行证
 - [ ] 挖矿
 - [x] 关闭游戏
 
