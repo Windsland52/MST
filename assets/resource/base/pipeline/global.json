@@ -53,10 +53,10 @@
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
-            8,
-            72,
-            1257,
-            534
+            76,
+            135,
+            1099,
+            514
         ],
         "action": "DoNothing"
     },
