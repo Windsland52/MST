@@ -190,6 +190,30 @@
             }
         },
         {
+            "name": "家园",
+            "entry": "家园",
+            "pipeline_override": {
+                "override_位于主界面": {
+                    "next": [
+                        "进入家园"
+                    ]
+                },
+                "返回主界面_fast": {
+                    "next": [
+                        "加载中",
+                        "加载中1",
+                        "点击空白区域",
+                        "关闭悬浮窗",
+                        "点击返回按钮",
+                        "其他特殊退出"
+                    ]
+                }
+            },
+            "option": [
+                "家园选项"
+            ]
+        },
+        {
             "name": "领取任务奖励",
             "entry": "领取任务奖励",
             "pipeline_override": {
@@ -225,5 +249,69 @@
             "name": "关闭游戏",
             "entry": "关闭游戏"
         }
-    ]
+    ],
+    "option": {
+        "家园选项": {
+            "cases": [
+                {
+                    "name": "炼金炉",
+                    "pipeline_override": {
+                        "override_位于家园": {
+                            "next": [
+                                "炼金炉"
+                            ]
+                        },
+                        "override_位于总览": {
+                            "next": [
+                                "位于炼金炉"
+                            ],
+                            "interrupt": [
+                                "进入炼金炉"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "种植",
+                    "pipeline_override": {
+                        "override_位于家园": {
+                            "next": [
+                                "种植"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "事务派遣",
+                    "pipeline_override": {
+                        "override_位于家园": {
+                            "next": [
+                                "事务派遣"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "拜访好友",
+                    "pipeline_override": {
+                        "override_位于家园": {
+                            "next": [
+                                "拜访好友"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "领取奖励",
+                    "pipeline_override": {
+                        "override_位于家园": {
+                            "next": [
+                                "领取奖励"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }

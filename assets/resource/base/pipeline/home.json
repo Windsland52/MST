@@ -1,0 +1,208 @@
+{
+    "家园": {
+        "next": [
+            "override_位于家园"
+        ],
+        "interrupt": [
+            "点击返回按钮",
+            "关闭悬浮窗",
+            "不在家园"
+        ]
+    },
+    "不在家园": {
+        "home_doc": "尝试返回主页面后再进入家园",
+        "next": [
+            "override_位于主界面"
+        ],
+        "interrupt": [
+            "返回主界面_fast"
+        ]
+    },
+    "进入家园": {
+        "next": [
+            "进入家园1",
+            "进入家园2",
+            "进入家园3",
+            "进入家园"
+        ]
+    },
+    "进入家园1": {
+        "home_doc": "点击家园(spine)",
+        "recognition": "OCR",
+        "expected": "家园",
+        "roi": [
+            438,
+            477,
+            63,
+            33
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "位于家园"
+        ],
+        "interrupt": [
+            "加载中1"
+        ]
+    },
+    "进入家园2": {
+        "home_doc": "点击家园(live2d)",
+        "recognition": "OCR",
+        "expected": "家园",
+        "roi": [
+            438,
+            366,
+            66,
+            36
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "位于家园"
+        ],
+        "interrupt": [
+            "加载中1"
+        ]
+    },
+    "进入家园3": {
+        "home_doc": "点击家园(誓约)",
+        "recognition": "OCR",
+        "expected": "家园",
+        "roi": [
+            126,
+            141,
+            1036,
+            347
+        ],
+        "action": "Click",
+        "next": [
+            "位于家园"
+        ],
+        "interrupt": [
+            "加载中1"
+        ]
+    },
+    "位于家园": {
+        "recognition": "OCR",
+        "expected": "家园",
+        "roi": [
+            212,
+            25,
+            62,
+            33
+        ]
+    },
+    "override_位于家园": {
+        "recognition": "OCR",
+        "expected": "家园",
+        "roi": [
+            212,
+            25,
+            62,
+            33
+        ]
+    },
+    "炼金炉": {
+        "next": [
+            "进入总览"
+        ]
+    },
+    "进入总览": {
+        "recognition": "OCR",
+        "expected": "总览",
+        "roi": [
+            43,
+            251,
+            43,
+            26
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "override_位于总览",
+            "进入总览"
+        ]
+    },
+    "位于总览": {
+        "recognition": "OCR",
+        "expected": "总览",
+        "roi": [
+            211,
+            25,
+            62,
+            34
+        ],
+        "only_rec": true
+    },
+    "override_位于总览": {
+        "recognition": "OCR",
+        "expected": "总览",
+        "roi": [
+            211,
+            25,
+            62,
+            34
+        ],
+        "only_rec": true
+    },
+    "位于炼金炉": {
+        "recognition": "OCR",
+        "expected": "炼金炉",
+        "roi": [
+            211,
+            25,
+            88,
+            34
+        ],
+        "only_rec": true,
+        "next": [
+            "凝练石收取完毕"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "收取凝练石"
+        ]
+    },
+    "进入炼金炉": {
+        "recognition": "TemplateMatch",
+        "template": "./Home/alembic.png",
+        "roi": [
+            124,
+            132,
+            134,
+            145
+        ],
+        "action": "Click"
+    },
+    "凝练石收取完毕": {
+        "recognition": "OCR",
+        "expected": "点击收获",
+        "roi": [
+            741,
+            655,
+            192,
+            50
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "位于家园"
+        ],
+        "interrupt": [
+            "点击返回按钮"
+        ],
+        "on_error": "返回主界面_fast"
+    },
+    "收取凝练石": {
+        "recognition": "OCR",
+        "expected": "点击收获",
+        "roi": [
+            741,
+            655,
+            192,
+            50
+        ],
+        "only_rec": true,
+        "action": "Click"
+    }
+}
