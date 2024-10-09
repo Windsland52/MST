@@ -42,10 +42,10 @@
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
-            114,
-            271,
-            386,
-            111
+            76,
+            135,
+            1099,
+            514
         ],
         "action": "DoNothing"
     },
