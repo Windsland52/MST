@@ -145,43 +145,14 @@
         ],
         "only_rec": true
     },
-    "位于炼金炉": {
-        "recognition": "OCR",
-        "expected": "炼金炉",
-        "roi": [
-            211,
-            25,
-            88,
-            34
-        ],
-        "only_rec": true,
-        "next": [
-            "凝练石收取完毕"
-        ],
-        "interrupt": [
-            "点击空白区域",
-            "收取凝练石"
-        ]
-    },
-    "进入炼金炉": {
-        "recognition": "TemplateMatch",
-        "template": "./Home/alembic.png",
-        "roi": [
-            124,
-            132,
-            134,
-            145
-        ],
-        "action": "Click"
-    },
     "凝练石收取完毕": {
         "recognition": "OCR",
-        "expected": "点击收获",
+        "expected": "领取",
         "roi": [
-            741,
-            655,
-            192,
-            50
+            540,
+            204,
+            43,
+            24
         ],
         "only_rec": true,
         "inverse": true,
@@ -195,12 +166,209 @@
     },
     "收取凝练石": {
         "recognition": "OCR",
-        "expected": "点击收获",
+        "expected": "领取",
         "roi": [
-            741,
-            655,
-            192,
-            50
+            540,
+            204,
+            43,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "种植": {
+        "next": [
+            "进入总览"
+        ]
+    },
+    "收菜完毕": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            539,
+            395,
+            43,
+            28
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "位于种植"
+        ],
+        "interrupt": [
+            "进入种植"
+        ]
+    },
+    "收菜": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            539,
+            395,
+            43,
+            28
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "位于种植": {
+        "home_doc": "种植界面",
+        "recognition": "OCR",
+        "expected": "种子",
+        "roi": [
+            114,
+            673,
+            74,
+            25
+        ],
+        "only_rec": true,
+        "next": [
+            "种植完毕"
+        ],
+        "interrupt": [
+            "点击种植",
+            "选择种子"
+        ]
+    },
+    "进入种植": {
+        "recognition": "TemplateMatch",
+        "template": "./Home/plant.png",
+        "roi": [
+            121,
+            327,
+            138,
+            142
+        ],
+        "action": "Click"
+    },
+    "种植完毕": {
+        "recognition": "OCR",
+        "expected": "没有空地",
+        "roi": [
+            597,
+            235,
+            85,
+            25
+        ],
+        "only_rec": true,
+        "next": [
+            "位于家园"
+        ],
+        "interrupt": [
+            "退出种植"
+        ]
+    },
+    "点击种植": {
+        "recognition": "OCR",
+        "expected": "种植",
+        "roi": [
+            610,
+            593,
+            63,
+            29
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "选择种子": {
+        "home_doc": "配置项,默认选择最左边的种子",
+        "recognition": "OCR",
+        "expected": "种子",
+        "roi": [
+            65,
+            624,
+            979,
+            96
+        ],
+        "action": "Click"
+    },
+    "事务派遣": {
+        "next": [
+            "进入总览"
+        ]
+    },
+    "领取事务派遣奖励完毕": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            539,
+            590,
+            47,
+            27
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "位于事务派遣"
+        ],
+        "interrupt": [
+            "进入事务派遣"
+        ]
+    },
+    "领取事务派遣奖励": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            539,
+            590,
+            47,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "位于事务派遣": {
+        "_doc": "未完成：刷新逻辑",
+        "recognition": "OCR",
+        "expected": "事务中心",
+        "roi": [
+            213,
+            26,
+            115,
+            33
+        ],
+        "only_rec": true,
+        "next": "派遣完毕",
+        "interrupt": [
+            "一键派遣"
+        ]
+    },
+    "进入事务派遣": {
+        "recognition": "TemplateMatch",
+        "template": "./Home/transaction.png",
+        "roi": [
+            122,
+            518,
+            138,
+            147
+        ],
+        "action": "Click"
+    },
+    "派遣完毕": {
+        "recognition": "OCR",
+        "expected": "不",
+        "roi": [
+            549,
+            236,
+            181,
+            23
+        ],
+        "only_rec": true,
+        "next": [
+            "位于家园"
+        ],
+        "interrupt": [
+            "点击返回按钮"
+        ]
+    },
+    "一键派遣": {
+        "recognition": "OCR",
+        "expected": "派遣",
+        "roi": [
+            428,
+            673,
+            103,
+            34
         ],
         "only_rec": true,
         "action": "Click"
