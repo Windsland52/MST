@@ -118,7 +118,7 @@
     },
     "七日签到": {
         "recognition": "OCR",
-        "expected": "7/7",
+        "expected": "0(.*)7",
         "roi": [
             416,
             667,

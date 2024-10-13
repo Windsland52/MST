@@ -81,7 +81,7 @@
     },
     "1号补给无": {
         "recognition": "OCR",
-        "expected": "本日剩余：0",
+        "expected": "本日剩余(.)0",
         "roi": [
             315,
             580,
@@ -97,7 +97,7 @@
     },
     "2号补给无": {
         "recognition": "OCR",
-        "expected": "本日剩余：0",
+        "expected": "本日剩余(.)0",
         "roi": [
             554,
             581,
@@ -119,7 +119,7 @@
     },
     "1号补给有": {
         "recognition": "OCR",
-        "expected": "本日剩余：0",
+        "expected": "本日剩余(.)0",
         "roi": "1号补给无",
         "only_rec": true,
         "inverse": true,
@@ -130,7 +130,7 @@
     },
     "2号补给有": {
         "recognition": "OCR",
-        "expected": "本日剩余：0",
+        "expected": "本日剩余(.)0",
         "roi": "2号补给无",
         "only_rec": true,
         "inverse": true,
