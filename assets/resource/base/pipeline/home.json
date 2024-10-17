@@ -443,5 +443,189 @@
         ],
         "only_rec": true,
         "action": "Click"
+    },
+    "拜访好友": {
+        "next": [
+            "进入拜访列表"
+        ]
+    },
+    "进入拜访列表": {
+        "recognition": "OCR",
+        "expected": "拜访",
+        "roi": [
+            42,
+            374,
+            45,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "位于拜访列表",
+            "进入拜访列表"
+        ]
+    },
+    "位于拜访列表": {
+        "recognition": "OCR",
+        "expected": "拜访",
+        "roi": [
+            635,
+            102,
+            48,
+            24
+        ],
+        "only_rec": true,
+        "next": [
+            "拜访列表次数用尽",
+            "有好友",
+            "无好友"
+        ]
+    },
+    "拜访列表次数用尽": {
+        "recognition": "OCR",
+        "expected": "拜访",
+        "roi": [
+            970,
+            647,
+            36,
+            23
+        ],
+        "only_rec": true,
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "返回主界面_fast"
+        ]
+    },
+    "有好友": {
+        "recognition": "OCR",
+        "expected": "拜访",
+        "roi": [
+            1023,
+            206,
+            48,
+            26
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "进入左下房间"
+        ],
+        "interrupt": [
+            "加载中1"
+        ]
+    },
+    "进入左下房间": {
+        "recognition": "OCR",
+        "expected": "拜访下一好友",
+        "roi": [
+            37,
+            680,
+            130,
+            31
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "target": [
+            245,
+            636,
+            96,
+            50
+        ],
+        "next": [
+            "进入左下房间1",
+            "有好友"
+        ],
+        "interrupt": [
+            "加载中1"
+        ]
+    },
+    "进入左下房间1": {
+        "action": "Click",
+        "target": [
+            245,
+            636,
+            96,
+            50
+        ],
+        "next": [
+            "位于拜访页面",
+            "有好友",
+            "加载中1",
+            "无好友"
+        ]
+    },
+    "无好友": {
+        "recognition": "OCR",
+        "expected": "拜访",
+        "roi": [
+            1023,
+            206,
+            48,
+            26
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "返回主界面_fast"
+        ]
+    },
+    "位于拜访页面": {
+        "recognition": "OCR",
+        "expected": "拜访下一好友",
+        "roi": [
+            37,
+            680,
+            130,
+            31
+        ],
+        "only_rec": true,
+        "next": [
+            "拾箱次数用尽"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "加载中1",
+            "拾取箱子",
+            "拜访下一好友"
+        ]
+    },
+    "拾箱次数用尽": {
+        "recognition": "OCR",
+        "expected": "0/",
+        "roi": [
+            1168,
+            132,
+            112,
+            119
+        ],
+        "next": [
+            "返回主界面_fast"
+        ]
+    },
+    "拾取箱子": {
+        "post_delay": 0,
+        "recognition": "TemplateMatch",
+        "template": [
+            "./Home/box.png",
+            "./Home/box2.png"
+        ],
+        "action": "Click"
+    },
+    "拜访下一好友": {
+        "recognition": "OCR",
+        "expected": "拜访下一好友",
+        "roi": [
+            37,
+            680,
+            130,
+            31
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_delay": 1000
     }
 }
