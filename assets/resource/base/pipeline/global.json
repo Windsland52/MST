@@ -287,8 +287,34 @@
             "退出主线",
             "退出聊天",
             "退出种植",
+            "网络波动",
+            "返回登录",
             "空任务"
         ]
+    },
+    "网络波动": {
+        "recognition": "OCR",
+        "expected": "重新连接",
+        "roi": [
+            691,
+            403,
+            99,
+            30
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "返回登录": {
+        "recognition": "OCR",
+        "expected": "返回登录",
+        "roi": [
+            586,
+            390,
+            108,
+            26
+        ],
+        "only_rec": true,
+        "action": "Click"
     },
     "退出功能列表": {
         "recognition": "OCR",

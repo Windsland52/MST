@@ -318,7 +318,6 @@
         "action": "Click"
     },
     "位于事务派遣": {
-        "_doc": "未完成：刷新逻辑",
         "recognition": "OCR",
         "expected": "事务中心",
         "roi": [
@@ -328,7 +327,31 @@
             33
         ],
         "only_rec": true,
-        "next": "派遣完毕",
+        "next": [
+            "无可刷新材料",
+            "免费次数用尽"
+        ],
+        "interrupt": [
+            "有可刷新委托"
+        ]
+    },
+    "无可刷新材料": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "./Home/exp.png",
+            "./Home/exp1.png",
+            "./Home/money.png"
+        ],
+        "roi": [
+            135,
+            213,
+            1110,
+            169
+        ],
+        "inverse": true,
+        "next": [
+            "派遣完毕"
+        ],
         "interrupt": [
             "一键派遣"
         ]
@@ -343,6 +366,24 @@
             147
         ],
         "action": "Click"
+    },
+    "免费次数用尽": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": [
+            97,
+            560,
+            1095,
+            27
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "派遣完毕"
+        ],
+        "interrupt": [
+            "一键派遣"
+        ]
     },
     "派遣完毕": {
         "recognition": "OCR",
@@ -360,6 +401,36 @@
         "interrupt": [
             "点击返回按钮"
         ]
+    },
+    "有可刷新委托": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "./Home/exp.png",
+            "./Home/exp1.png",
+            "./Home/money.png"
+        ],
+        "roi": [
+            135,
+            213,
+            1110,
+            169
+        ],
+        "next": [
+            "刷新当前委托任务"
+        ]
+    },
+    "刷新当前委托任务": {
+        "recognition": "OCR",
+        "expected": "刷新",
+        "roi": "有可刷新委托",
+        "roi_offset": [
+            -3,
+            277,
+            20,
+            2
+        ],
+        "only_rec": true,
+        "action": "Click"
     },
     "一键派遣": {
         "recognition": "OCR",

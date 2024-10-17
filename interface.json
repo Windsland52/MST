@@ -190,7 +190,7 @@
             }
         },
         {
-            "name": "家园",
+            "name": "炼金炉",
             "entry": "家园",
             "pipeline_override": {
                 "override_位于主界面": {
@@ -207,11 +207,91 @@
                         "点击返回按钮",
                         "其他特殊退出"
                     ]
+                },
+                "override_位于家园": {
+                    "next": [
+                        "炼金炉"
+                    ]
+                },
+                "override_位于总览": {
+                    "next": [
+                        "凝练石收取完毕"
+                    ],
+                    "interrupt": [
+                        "点击空白区域",
+                        "收取凝练石"
+                    ]
                 }
-            },
-            "option": [
-                "家园选项"
-            ]
+            }
+        },
+        {
+            "name": "种植",
+            "entry": "家园",
+            "pipeline_override": {
+                "override_位于主界面": {
+                    "next": [
+                        "进入家园"
+                    ]
+                },
+                "返回主界面_fast": {
+                    "interrupt": [
+                        "加载中",
+                        "加载中1",
+                        "点击空白区域",
+                        "关闭悬浮窗",
+                        "点击返回按钮",
+                        "其他特殊退出"
+                    ]
+                },
+                "override_位于家园": {
+                    "next": [
+                        "种植"
+                    ]
+                },
+                "override_位于总览": {
+                    "next": [
+                        "收菜完毕"
+                    ],
+                    "interrupt": [
+                        "点击空白区域",
+                        "收菜"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "事务派遣",
+            "entry": "家园",
+            "pipeline_override": {
+                "override_位于主界面": {
+                    "next": [
+                        "进入家园"
+                    ]
+                },
+                "返回主界面_fast": {
+                    "interrupt": [
+                        "加载中",
+                        "加载中1",
+                        "点击空白区域",
+                        "关闭悬浮窗",
+                        "点击返回按钮",
+                        "其他特殊退出"
+                    ]
+                },
+                "override_位于家园": {
+                    "next": [
+                        "事务派遣"
+                    ]
+                },
+                "override_位于总览": {
+                    "next": [
+                        "领取事务派遣奖励完毕"
+                    ],
+                    "interrupt": [
+                        "领取事务派遣奖励"
+                    ]
+                }
+            }
         },
         {
             "name": "领取任务奖励",
@@ -250,86 +330,5 @@
             "entry": "关闭游戏"
         }
     ],
-    "option": {
-        "家园选项": {
-            "cases": [
-                {
-                    "name": "炼金炉",
-                    "pipeline_override": {
-                        "override_位于家园": {
-                            "next": [
-                                "炼金炉"
-                            ]
-                        },
-                        "override_位于总览": {
-                            "next": [
-                                "凝练石收取完毕"
-                            ],
-                            "interrupt": [
-                                "点击空白区域",
-                                "收取凝练石"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "种植",
-                    "pipeline_override": {
-                        "override_位于家园": {
-                            "next": [
-                                "种植"
-                            ]
-                        },
-                        "override_位于总览": {
-                            "next": [
-                                "收菜完毕"
-                            ],
-                            "interrupt": [
-                                "点击空白区域",
-                                "收菜"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "事务派遣",
-                    "pipeline_override": {
-                        "override_位于家园": {
-                            "next": [
-                                "事务派遣"
-                            ]
-                        },
-                        "override_位于总览": {
-                            "next": [
-                                "领取事务派遣奖励完毕"
-                            ],
-                            "interrupt": [
-                                "领取事务派遣奖励"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "拜访好友",
-                    "pipeline_override": {
-                        "override_位于家园": {
-                            "next": [
-                                "拜访好友"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "领取奖励",
-                    "pipeline_override": {
-                        "override_位于家园": {
-                            "next": [
-                                "领取奖励"
-                            ]
-                        }
-                    }
-                }
-            ]
-        }
-    }
+    "option": {}
 }
