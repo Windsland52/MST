@@ -626,5 +626,295 @@
         ],
         "only_rec": true,
         "action": "Click"
+    },
+    "捕鱼": {
+        "next": [
+            "进入捕鱼界面",
+            "未开启捕鱼"
+        ]
+    },
+    "未开启捕鱼": {
+        "recognition": "OCR",
+        "expected": "钓鱼",
+        "roi": [
+            42,
+            438,
+            43,
+            24
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "返回主界面_fast"
+        ]
+    },
+    "进入捕鱼界面": {
+        "recognition": "OCR",
+        "expected": "钓鱼",
+        "roi": [
+            42,
+            438,
+            43,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "位于捕鱼界面",
+            "进入捕鱼界面"
+        ]
+    },
+    "位于捕鱼界面": {
+        "recognition": "OCR",
+        "expected": "钓鱼",
+        "roi": [
+            213,
+            26,
+            58,
+            32
+        ],
+        "only_rec": true,
+        "next": [
+            "无自动捕鱼奖励"
+        ],
+        "interrupt": [
+            "收取自动捕鱼奖励"
+        ]
+    },
+    "收取自动捕鱼奖励": {
+        "recognition": "ColorMatch",
+        "roi": [
+            1198,
+            263,
+            22,
+            21
+        ],
+        "method": 4,
+        "lower": [
+            230,
+            40,
+            40
+        ],
+        "upper": [
+            250,
+            50,
+            50
+        ],
+        "action": "Click",
+        "next": [
+            "点击空白区域",
+            "收取自动捕鱼奖励"
+        ]
+    },
+    "无自动捕鱼奖励": {
+        "recognition": "ColorMatch",
+        "roi": [
+            1198,
+            263,
+            22,
+            21
+        ],
+        "method": 4,
+        "lower": [
+            230,
+            40,
+            40
+        ],
+        "upper": [
+            250,
+            50,
+            50
+        ],
+        "inverse": true,
+        "next": [
+            "位于捕鱼工具选择界面"
+        ],
+        "interrupt": [
+            "进入捕鱼工具选择界面"
+        ]
+    },
+    "override_无自动捕鱼奖励": {
+        "recognition": "ColorMatch",
+        "roi": [
+            1198,
+            263,
+            22,
+            21
+        ],
+        "method": 4,
+        "lower": [
+            230,
+            40,
+            40
+        ],
+        "upper": [
+            250,
+            50,
+            50
+        ],
+        "inverse": true,
+        "next": [
+            "override_位于捕鱼工具选择界面"
+        ],
+        "interrupt": [
+            "进入捕鱼工具选择界面"
+        ]
+    },
+    "进入捕鱼工具选择界面": {
+        "recognition": "OCR",
+        "expected": "捕鱼",
+        "roi": [
+            1142,
+            649,
+            44,
+            29
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "位于捕鱼工具选择界面": {
+        "recognition": "OCR",
+        "expected": "请选择捕鱼工具",
+        "roi": [
+            558,
+            153,
+            167,
+            31
+        ],
+        "only_rec": true,
+        "next": [
+            "捕鱼100次完成"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "捕鱼100次",
+            "override_无自动捕鱼奖励"
+        ]
+    },
+    "override_位于捕鱼工具选择界面": {
+        "recognition": "OCR",
+        "expected": "请选择捕鱼工具",
+        "roi": [
+            558,
+            153,
+            167,
+            31
+        ],
+        "only_rec": true
+    },
+    "捕鱼100次": {
+        "recognition": "OCR",
+        "expected": "100",
+        "roi": [
+            914,
+            629,
+            137,
+            31
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "捕鱼100次完成": {
+        "recognition": "ColorMatch",
+        "roi": [
+            862,
+            628,
+            284,
+            92
+        ],
+        "method": 4,
+        "lower": [
+            220,
+            90,
+            95
+        ],
+        "upper": [
+            240,
+            105,
+            105
+        ],
+        "next": [
+            "捕鱼10次完成"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "捕鱼10次",
+            "override_无自动捕鱼奖励"
+        ]
+    },
+    "捕鱼10次": {
+        "recognition": "OCR",
+        "expected": "10",
+        "roi": [
+            578,
+            627,
+            127,
+            33
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "捕鱼10次完成": {
+        "recognition": "ColorMatch",
+        "roi": [
+            529,
+            628,
+            269,
+            92
+        ],
+        "method": 4,
+        "lower": [
+            220,
+            90,
+            95
+        ],
+        "upper": [
+            240,
+            105,
+            105
+        ],
+        "next": [
+            "捕鱼完成"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "捕鱼1次",
+            "override_无自动捕鱼奖励"
+        ]
+    },
+    "捕鱼1次": {
+        "recognition": "OCR",
+        "expected": "开始捕鱼",
+        "roi": [
+            241,
+            628,
+            116,
+            31
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "捕鱼完成": {
+        "recognition": "ColorMatch",
+        "roi": [
+            196,
+            626,
+            250,
+            94
+        ],
+        "method": 4,
+        "lower": [
+            220,
+            90,
+            95
+        ],
+        "upper": [
+            240,
+            105,
+            105
+        ],
+        "next": [
+            "返回主界面_fast"
+        ]
     }
 }
