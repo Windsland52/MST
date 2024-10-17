@@ -625,7 +625,6 @@
             31
         ],
         "only_rec": true,
-        "action": "Click",
-        "post_delay": 1000
+        "action": "Click"
     }
 }
