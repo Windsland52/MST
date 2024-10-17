@@ -4,7 +4,7 @@
             "override_位于主界面"
         ],
         "interrupt": [
-            "返回主界面"
+            "返回主界面_fast"
         ]
     },
     "领取商店补给开始": {
@@ -31,12 +31,11 @@
         "recognition": "OCR",
         "expected": "商店",
         "roi": [
-            446,
-            97,
-            58,
-            32
+            0,
+            44,
+            1280,
+            136
         ],
-        "only_rec": true,
         "action": "Click",
         "next": [
             "进入补给礼包界面",
@@ -82,7 +81,7 @@
     },
     "1号补给无": {
         "recognition": "OCR",
-        "expected": "本日剩余：0",
+        "expected": "本日剩余(.)0",
         "roi": [
             315,
             580,
@@ -98,7 +97,7 @@
     },
     "2号补给无": {
         "recognition": "OCR",
-        "expected": "本日剩余：0",
+        "expected": "本日剩余(.)0",
         "roi": [
             554,
             581,
@@ -120,7 +119,7 @@
     },
     "1号补给有": {
         "recognition": "OCR",
-        "expected": "本日剩余：0",
+        "expected": "本日剩余(.)0",
         "roi": "1号补给无",
         "only_rec": true,
         "inverse": true,
@@ -131,7 +130,7 @@
     },
     "2号补给有": {
         "recognition": "OCR",
-        "expected": "本日剩余：0",
+        "expected": "本日剩余(.)0",
         "roi": "2号补给无",
         "only_rec": true,
         "inverse": true,
@@ -216,6 +215,7 @@
             21
         ],
         "only_rec": true,
+        "focus": true,
         "next": [
             "位于主界面1",
             "位于主界面2",
@@ -235,6 +235,7 @@
             21
         ],
         "only_rec": true,
+        "focus": true,
         "next": [
             "位于主界面1",
             "位于主界面2",

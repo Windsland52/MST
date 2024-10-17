@@ -42,10 +42,10 @@
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
-            114,
-            271,
-            386,
-            111
+            76,
+            135,
+            1099,
+            514
         ],
         "action": "DoNothing"
     },
@@ -53,10 +53,10 @@
         "recognition": "OCR",
         "expected": "相伴",
         "roi": [
-            8,
-            72,
-            1257,
-            534
+            76,
+            135,
+            1099,
+            514
         ],
         "action": "DoNothing"
     },
@@ -285,8 +285,36 @@
             "退出邮件",
             "退出作战",
             "退出主线",
-            "退出聊天"
+            "退出聊天",
+            "退出种植",
+            "网络波动",
+            "返回登录",
+            "空任务"
         ]
+    },
+    "网络波动": {
+        "recognition": "OCR",
+        "expected": "重新连接",
+        "roi": [
+            691,
+            403,
+            99,
+            30
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "返回登录": {
+        "recognition": "OCR",
+        "expected": "返回登录",
+        "roi": [
+            586,
+            390,
+            108,
+            26
+        ],
+        "only_rec": true,
+        "action": "Click"
     },
     "退出功能列表": {
         "recognition": "OCR",
@@ -341,6 +369,26 @@
             35
         ]
     },
+    "退出种植": {
+        "global_doc": "种植界面，退出种植",
+        "recognition": "OCR",
+        "expected": "种子",
+        "roi": [
+            114,
+            673,
+            74,
+            25
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "target": [
+            17,
+            0,
+            166,
+            109
+        ]
+    },
+    "空任务": {},
     "购买": {
         "global_doc": "购买界面，点击购买",
         "recognition": "OCR",
