@@ -60,10 +60,23 @@
         ],
         "action": "DoNothing"
     },
+    "加载": {
+        "global_doc": "加载（百分号）",
+        "recognition": "OCR",
+        "expected": "\\d+%",
+        "roi": [
+            617,
+            597,
+            47,
+            24
+        ],
+        "only_rec": true,
+        "action": "DoNothing"
+    },
     "加载中": {
         "global_doc": "加载中（左上）",
         "recognition": "OCR",
-        "expected": "加载中",
+        "expected": "加载",
         "roi": [
             120,
             260,
@@ -76,7 +89,7 @@
     "加载中1": {
         "global_doc": "加载中（中下）",
         "recognition": "OCR",
-        "expected": "加载中",
+        "expected": "加载",
         "roi": [
             554,
             513,
@@ -465,6 +478,172 @@
             143,
             133
         ],
+        "action": "Click"
+    },
+    "位于战斗界面": {
+        "global_doc": "战斗界面",
+        "recognition": "OCR",
+        "expected": "普攻",
+        "roi": [
+            145,
+            665,
+            43,
+            26
+        ],
+        "only_rec": true,
+        "action": "DoNothing"
+    },
+    "智能战斗中": {
+        "global_doc": "战斗界面，智能战斗中",
+        "recognition": "ColorMatch",
+        "roi": [
+            225,
+            674,
+            16,
+            14
+        ],
+        "lower": [
+            230,
+            235,
+            230
+        ],
+        "upper": [
+            255,
+            255,
+            255
+        ]
+    },
+    "pre_开启智能战斗": {
+        "global_doc": "战斗界面，开启智能战斗前置判断",
+        "recognition": "ColorMatch",
+        "roi": [
+            145,
+            665,
+            43,
+            26
+        ],
+        "lower": [
+            0,
+            0,
+            0
+        ],
+        "upper": [
+            25,
+            25,
+            25
+        ],
+        "next": [
+            "开启智能战斗",
+            "空任务"
+        ]
+    },
+    "开启智能战斗": {
+        "global_doc": "战斗界面，开启智能战斗",
+        "recognition": "OCR",
+        "expected": "普攻",
+        "roi": [
+            225,
+            674,
+            16,
+            14
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "关闭智能战斗": {
+        "global_doc": "战斗界面，关闭智能战斗",
+        "recognition": "ColorMatch",
+        "roi": [
+            225,
+            674,
+            16,
+            14
+        ],
+        "lower": [
+            230,
+            235,
+            230
+        ],
+        "upper": [
+            255,
+            255,
+            255
+        ],
+        "action": "Click"
+    },
+    "普攻战斗中": {
+        "global_doc": "战斗界面，普攻战斗中",
+        "recognition": "ColorMatch",
+        "roi": [
+            127,
+            671,
+            18,
+            17
+        ],
+        "lower": [
+            230,
+            235,
+            230
+        ],
+        "upper": [
+            255,
+            255,
+            255
+        ]
+    },
+    "开启战斗普攻": {
+        "global_doc": "战斗界面，开启战斗普攻",
+        "recognition": "ColorMatch",
+        "roi": [
+            127,
+            671,
+            18,
+            17
+        ],
+        "lower": [
+            0,
+            0,
+            0
+        ],
+        "upper": [
+            25,
+            25,
+            25
+        ],
+        "action": "Click"
+    },
+    "关闭战斗普攻": {
+        "global_doc": "战斗界面，关闭战斗普攻",
+        "recognition": "ColorMatch",
+        "roi": [
+            127,
+            671,
+            18,
+            17
+        ],
+        "lower": [
+            230,
+            235,
+            230
+        ],
+        "upper": [
+            255,
+            255,
+            255
+        ],
+        "action": "Click"
+    },
+    "快速结算确定": {
+        "global_doc": "快速结算确认",
+        "recognition": "OCR",
+        "expected": "确定",
+        "roi": [
+            609,
+            458,
+            64,
+            32
+        ],
+        "only_rec": true,
         "action": "Click"
     }
 }
