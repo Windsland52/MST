@@ -29,11 +29,15 @@
     "位于公会主页面": {
         "recognition": "OCR",
         "expected": "公会",
+        "replace": [
+            "公会悬赏",
+            ""
+        ],
         "roi": [
             214,
-            25,
-            58,
-            33
+            26,
+            113,
+            31
         ],
         "only_rec": true,
         "next": [
@@ -47,11 +51,15 @@
     "override_位于公会主页面": {
         "recognition": "OCR",
         "expected": "公会",
+        "replace": [
+            "公会悬赏",
+            ""
+        ],
         "roi": [
             214,
-            25,
-            58,
-            33
+            26,
+            113,
+            31
         ],
         "only_rec": true
     },
