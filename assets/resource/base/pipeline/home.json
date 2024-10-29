@@ -90,7 +90,8 @@
             25,
             62,
             33
-        ]
+        ],
+        "only_rec": true
     },
     "override_位于家园": {
         "recognition": "OCR",
@@ -100,7 +101,8 @@
             25,
             62,
             33
-        ]
+        ],
+        "only_rec": true
     },
     "炼金炉": {
         "next": [
@@ -510,6 +512,7 @@
         "only_rec": true,
         "action": "Click",
         "next": [
+            "有好友",
             "进入左下房间"
         ],
         "interrupt": [
@@ -590,8 +593,7 @@
         "interrupt": [
             "点击空白区域",
             "加载中1",
-            "拾取箱子",
-            "拜访下一好友"
+            "pre_检测箱子"
         ]
     },
     "无可拜访好友": {
@@ -615,16 +617,18 @@
         "recognition": "OCR",
         "expected": "0/",
         "roi": [
-            1168,
-            132,
-            112,
-            119
+            1216,
+            180,
+            34,
+            20
         ],
+        "only_rec": true,
         "next": [
             "位于家园"
         ],
         "interrupt": [
-            "回家"
+            "回家",
+            "加载中1"
         ]
     },
     "回家": {
@@ -639,8 +643,25 @@
         "only_rec": true,
         "action": "Click"
     },
+    "pre_检测箱子": {
+        "recognition": "OCR",
+        "expected": "拜访",
+        "roi": [
+            42,
+            251,
+            45,
+            25
+        ],
+        "only_rec": true,
+        "post_delay": 3000,
+        "next": [
+            "拾取箱子",
+            "拜访下一好友"
+        ]
+    },
     "拾取箱子": {
-        "post_delay": 0,
+        "pre_delay": 0,
+        "post_delay": 1000,
         "recognition": "TemplateMatch",
         "template": [
             "./Home/box.png",
