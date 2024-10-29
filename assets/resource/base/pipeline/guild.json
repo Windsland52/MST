@@ -1,0 +1,429 @@
+{
+    "公会": {
+        "next": [
+            "override_位于主界面"
+        ],
+        "interrupt": [
+            "返回主界面"
+        ]
+    },
+    "进入公会": {
+        "recognition": "OCR",
+        "expected": "公会",
+        "roi": [
+            1106,
+            668,
+            41,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "位于公会主页面"
+        ],
+        "interrupt": [
+            "加载中"
+        ]
+    },
+    "位于公会主页面": {
+        "recognition": "OCR",
+        "expected": "公会",
+        "replace": [
+            "公会悬赏",
+            ""
+        ],
+        "roi": [
+            214,
+            26,
+            113,
+            31
+        ],
+        "only_rec": true,
+        "next": [
+            "无悬赏令"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "领取悬赏令"
+        ]
+    },
+    "override_位于公会主页面": {
+        "recognition": "OCR",
+        "expected": "公会",
+        "replace": [
+            "公会悬赏",
+            ""
+        ],
+        "roi": [
+            214,
+            26,
+            113,
+            31
+        ],
+        "only_rec": true
+    },
+    "领取悬赏令": {
+        "recognition": "TemplateMatch",
+        "template": "./Guild/SignIn.png",
+        "roi": [
+            520,
+            348,
+            161,
+            163
+        ],
+        "action": "Click"
+    },
+    "无悬赏令": {
+        "recognition": "TemplateMatch",
+        "template": "./Guild/SignIn.png",
+        "roi": [
+            520,
+            348,
+            161,
+            163
+        ],
+        "inverse": true,
+        "pre_wait_freezes": 500,
+        "next": [
+            "位于公会悬赏"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "进入公会悬赏"
+        ]
+    },
+    "进入公会悬赏": {
+        "recognition": "OCR",
+        "expected": "悬赏",
+        "roi": [
+            895,
+            165,
+            47,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "位于公会悬赏": {
+        "recognition": "OCR",
+        "expected": "公会悬赏",
+        "roi": [
+            213,
+            25,
+            117,
+            34
+        ],
+        "only_rec": true,
+        "next": [
+            "override_战斗失败",
+            "悬赏令耗尽"
+        ],
+        "interrupt": [
+            "click_战斗成功",
+            "悬赏令未耗尽"
+        ]
+    },
+    "悬赏令未耗尽": {
+        "recognition": "OCR",
+        "expected": "(^0)",
+        "roi": [
+            1205,
+            25,
+            36,
+            22
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "战斗失败",
+            "战斗成功",
+            "当前关卡通关"
+        ],
+        "interrupt": [
+            "当前关卡未通关",
+            "快速挑战"
+        ]
+    },
+    "快速挑战": {
+        "recognition": "OCR",
+        "expected": "快速",
+        "roi": [
+            896,
+            659,
+            117,
+            34
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "当前关卡未通关": {
+        "recognition": "OCR",
+        "expected": "当前关卡未通关",
+        "roi": [
+            571,
+            237,
+            138,
+            24
+        ],
+        "only_rec": true,
+        "next": [
+            "战斗失败",
+            "click_战斗成功",
+            "当前不是阶段1"
+        ],
+        "interrupt": [
+            "当前是阶段1"
+        ]
+    },
+    "当前是阶段1": {
+        "recognition": "OCR",
+        "expected": "阶段1",
+        "roi": [
+            213,
+            418,
+            91,
+            37
+        ],
+        "only_rec": true,
+        "next": [
+            "位于战斗界面"
+        ],
+        "interrupt": [
+            "加载",
+            "进入公会悬赏挑战"
+        ]
+    },
+    "进入公会悬赏挑战": {
+        "recognition": "OCR",
+        "expected": "挑战",
+        "roi": [
+            1192,
+            664,
+            62,
+            31
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "click_战斗成功": {
+        "recognition": "OCR",
+        "expected": "成功",
+        "roi": [
+            458,
+            336,
+            268,
+            107
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "战斗成功": {
+        "recognition": "OCR",
+        "expected": "成功",
+        "roi": [
+            458,
+            336,
+            268,
+            107
+        ],
+        "only_rec": true
+    },
+    "战斗失败": {
+        "recognition": "OCR",
+        "expected": "失败",
+        "roi": [
+            458,
+            336,
+            268,
+            107
+        ],
+        "only_rec": true
+    },
+    "override_战斗失败": {
+        "recognition": "OCR",
+        "expected": "失败",
+        "roi": [
+            458,
+            336,
+            268,
+            107
+        ],
+        "only_rec": true
+    },
+    "当前不是阶段1": {
+        "recognition": "OCR",
+        "expected": "阶段1",
+        "roi": [
+            213,
+            418,
+            91,
+            37
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "next": [
+            "公会悬赏前一关"
+        ]
+    },
+    "公会悬赏前一关": {
+        "recognition": "OCR",
+        "expected": "阶段",
+        "roi": [
+            98,
+            425,
+            61,
+            26
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "当前关卡通关": {
+        "recognition": "OCR",
+        "expected": "最大",
+        "roi": [
+            834,
+            329,
+            59,
+            34
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "快速结算确定"
+        ]
+    },
+    "悬赏令耗尽": {
+        "recognition": "OCR",
+        "expected": "(^0)",
+        "replace": [
+            "。",
+            "0"
+        ],
+        "roi": [
+            1205,
+            25,
+            36,
+            22
+        ],
+        "only_rec": true
+    },
+    "进入公会任务列表": {
+        "recognition": "OCR",
+        "expected": "任务",
+        "roi": [
+            1106,
+            655,
+            44,
+            26
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "位于公会任务列表": {
+        "recognition": "OCR",
+        "expected": "任务栏",
+        "roi": [
+            583,
+            68,
+            93,
+            37
+        ],
+        "only_rec": true,
+        "next": [
+            "每日个人任务"
+        ],
+        "interrupt": [
+            "进入公会任务列表"
+        ]
+    },
+    "每日个人任务": {
+        "recognition": "OCR",
+        "expected": "每日个人任务",
+        "roi": [
+            57,
+            143,
+            140,
+            34
+        ],
+        "only_rec": true,
+        "next": [
+            "每日个人任务领取完毕"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "每日个人任务领取"
+        ]
+    },
+    "每日个人任务领取": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            461,
+            189,
+            160,
+            390
+        ],
+        "action": "Click",
+        "target": [
+            427,
+            584,
+            117,
+            41
+        ]
+    },
+    "每日个人任务领取完毕": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            461,
+            189,
+            160,
+            390
+        ],
+        "inverse": true,
+        "next": [
+            "每周公会任务领取完毕"
+        ],
+        "interrupt": [
+            "点击空白区域",
+            "每周公会任务领取"
+        ]
+    },
+    "每周公会任务领取": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            1062,
+            188,
+            160,
+            392
+        ],
+        "action": "Click",
+        "target": [
+            1043,
+            587,
+            101,
+            33
+        ]
+    },
+    "每周公会任务领取完毕": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            1062,
+            188,
+            160,
+            392
+        ],
+        "inverse": true,
+        "next": [
+            "位于主界面1",
+            "位于主界面2",
+            "位于主界面3"
+        ],
+        "interrupt": [
+            "返回主界面_fast"
+        ]
+    }
+}
