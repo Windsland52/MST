@@ -14,7 +14,7 @@ def check(dirs: List[Path]) -> bool:
 
     for dir in dirs:
         print(f"Checking {dir}...")
-        status = resource.post_path(dir).wait().status()
+        status = resource.post_path(dir).wait().property()
         if not status.succeeded():
             print(f"Failed to check {dir}.")
             return False
