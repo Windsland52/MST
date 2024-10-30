@@ -41,10 +41,9 @@ def install_resource():
         install_path / "resource",
         dirs_exist_ok=True,
     )
-    shutil.copytree(
+    shutil.copy2(
         working_dir / "assets" / "logo" / "logo.ico" ,
-        install_path,
-        dirs_exist_ok=True,
+        install_path
     )
     shutil.copy2(
         working_dir / "assets" / "interface.json",
