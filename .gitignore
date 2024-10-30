@@ -451,8 +451,6 @@ tools/ImageCropper/**/*.png
 .venv/
 myenv/
 
-.github/
-.vscode/
 .nicegui/
 
 assets/config/
