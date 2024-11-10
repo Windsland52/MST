@@ -20,7 +20,7 @@
             "name": "新月(bilibili)",
             "path": [
                 "{PROJECT_DIR}/resource/base",
-                "{PROJECT_DIR}/assets/resource/bilibili"
+                "{PROJECT_DIR}/resource/bilibili"
             ]
         },
         {

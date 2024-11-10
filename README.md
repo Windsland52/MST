@@ -65,13 +65,7 @@ _✨ 基于MaaFramework的灵魂潮汐(SoulTide)日常脚本 ✨_
 
 > 请注意！Windows 的电脑几乎全都是 x86_64 的，可能占 99.999%，除非你非常确定自己是 arm，否则别下这个！
 
-#### CLI
-
-- 解压后运行 `MaaPiCli.exe` 
-
-#### GUI
-
-- 解压后运行 `MFAWPF.exe` 
+- 解压后运行 `MFAWPF.exe`（图形化界面）或 `MaaPiCli.exe`（命令行）即可
 
 ### macOS
 
