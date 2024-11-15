@@ -84,7 +84,7 @@ _✨ 基于MaaFramework的灵魂潮汐(SoulTide)日常脚本 ✨_
 
 ## 其他说明
 
-- 模拟器分辨率请选择 `1280*720`
+- 模拟器分辨率请选择 `16:9`
 
 - 提示“应用程序错误”，一般是缺少运行库，请安装一下 [vc_redist](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 - 添加 `-d` 参数可跳过交互直接运行任务，如 `./MaaPiCli.exe -d`
