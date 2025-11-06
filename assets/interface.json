@@ -1,6 +1,8 @@
 {
     "name": "MST",
     "url": "https://github.com/Windsland52/MST",
+    "mfa_max_version": "v1.6.9",
+    "mfa_min_version": "v1.6.9",
     "default_controller": "adb",
     "lock_controller": true,
     "controller": [
